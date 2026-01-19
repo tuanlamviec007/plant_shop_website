@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}Giỏ hàng - Plant Shop{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-shopping-cart"></i> Giỏ Hàng Của Bạn</h2>
+
+    {% if cart_items %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Tạm tính</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in cart_items %}
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}"
+                                            style="width: 60px; height: 60px; object-fit: cover;" class="rounded me-3"
+                                            onerror="this.src='https://via.placeholder.com/60'">
+                                        <div>
+                                            <h6 class="mb-0">{{ item.product.name }}</h6>
+                                            <small class="text-muted">{{ item.product.category.name }}</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle">
+                                    <span class="fw-bold">{{ item.product.price|floatformat:0 }}đ</span>
+                                </td>
+                                <td class="align-middle">
+                                    <form method="post" action="{% url 'update_cart' item.id %}" class="d-inline">
+                                        {% csrf_token %}
+                                        <div class="input-group" style="width: 120px;">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                                onclick="this.parentElement.querySelector('input').value = Math.max(1, parseInt(this.parentElement.querySelector('input').value) - 1)">
+                                                -
+                                            </button>
+                                            <input type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                                max="{{ item.product.stock }}"
+                                                class="form-control form-control-sm text-center">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                                onclick="this.parentElement.querySelector('input').value = Math.min({{ item.product.stock }}, parseInt(this.parentElement.querySelector('input').value) + 1)">
+                                                +
+                                            </button>
+                                        </div>
+                                        <button type="submit" class="btn btn-sm btn-link">Cập nhật</button>
+                                    </form>
+                                    <small class="text-muted d-block">Còn {{ item.product.stock }} sản phẩm</small>
+                                </td>
+                                <td class="align-middle">
+                                    <span class="fw-bold text-success">{{ item.subtotal|floatformat:0 }}đ</span>
+                                </td>
+                                <td class="align-middle">
+                                    <form method="post" action="{% url 'remove_from_cart' item.id %}" class="d-inline">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Xóa sản phẩm này?')">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Thông Tin Đơn Hàng</h5>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Tạm tính:</span>
+                        <span class="fw-bold">{{ total|floatformat:0 }}đ</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Phí vận chuyển:</span>
+                        <span class="text-success">Miễn phí</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4">
+                        <span class="fw-bold fs-5">Tổng cộng:</span>
+                        <span class="fw-bold fs-5 text-success">{{ total|floatformat:0 }}đ</span>
+                    </div>
+
+                    <a href="{% url 'checkout' %}" class="btn btn-primary w-100 py-2 mb-2">
+                        <i class="fas fa-credit-card"></i> Thanh toán
+                    </a>
+                    <a href="{% url 'product_list' %}" class="btn btn-outline-secondary w-100">
+                        <i class="fas fa-arrow-left"></i> Tiếp tục mua hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="text-center py-5">
+        <i class="fas fa-shopping-cart fa-5x text-muted mb-4"></i>
+        <h4>Giỏ hàng trống</h4>
+        <p class="text-muted mb-4">Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm</p>
+        <a href="{% url 'product_list' %}" class="btn btn-primary">
+            <i class="fas fa-shopping-bag"></i> Mua sắm ngay
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

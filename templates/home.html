@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+
+{% block title %}Trang chủ - Plant Shop{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section mb-5">
+        <div class="row align-items-center py-5">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold mb-3">
+                    Mang <span style="color: var(--primary-color);">Thiên Nhiên</span><br>
+                    Vào Ngôi Nhà Của Bạn
+                </h1>
+                <p class="lead mb-4">
+                    Khám phá bộ sưu tập cây cảnh mini đa dạng, dễ chăm sóc.
+                    Sử dụng AI để nhận diện và tìm cây phù hợp!
+                </p>
+
+                <div class="d-flex gap-3">
+                    <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-bag"></i> Mua sắm ngay
+                    </a>
+                    <a href="{% url 'ai_recognition' %}" class="btn btn-outline-success btn-lg">
+                        <i class="fas fa-camera"></i> Nhận diện AI
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?w=600&h=400&fit=crop"
+                    alt="Plants" class="img-fluid rounded-4 shadow-lg" style="max-height: 400px; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section mb-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Danh Mục Cây Cảnh</h2>
+            <p class="text-muted">Chọn loại cây phù hợp với không gian của bạn</p>
+        </div>
+        <div class="row g-4">
+            {% for category in categories %}
+            <div class="col-md-4">
+                <a href="{% url 'product_list' %}?category={{ category.id }}" class="text-decoration-none">
+                    <div class="card h-100 category-card">
+                        <div class="card-body text-center p-4">
+                            <div class="category-icon mb-3">
+                                <i class="fas fa-leaf fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">{{ category.name }}</h5>
+                            <p class="card-text text-muted">{{ category.description|truncatewords:10 }}</p>
+                            <span class="badge bg-success">{{ category.products.count }} sản phẩm</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-muted">Chưa có danh mục nào</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products mb-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Sản Phẩm Nổi Bật</h2>
+            <p class="text-muted">Những cây cảnh được yêu thích nhất</p>
+        </div>
+        <div class="row g-4">
+            {% for product in featured_products %}
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card h-100">
+                    {% if product.discount_percent > 0 %}
+                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">
+                        -{{ product.discount_percent }}%
+                    </span>
+                    {% endif %}
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"
+                        style="height: 200px; object-fit: cover;"
+                        onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+                    <div class="card-body">
+                        <h6 class="card-title fw-bold">{{ product.name }}</h6>
+                        <p class="text-muted small mb-2">{{ product.category.name }}</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="text-warning me-2">
+                                {% for i in "12345" %}
+                                {% if forloop.counter <= product.rating_avg %} <i class="fas fa-star"></i>
+                                    {% else %}
+                                    <i class="far fa-star"></i>
+                                    {% endif %}
+                                    {% endfor %}
+                            </div>
+                            <small class="text-muted">({{ product.rating_count }})</small>
+                        </div>
+                        <div class="mb-2">
+                            {% if product.original_price %}
+                            <span class="text-decoration-line-through text-muted me-2">
+                                {{ product.original_price|floatformat:0 }}đ
+                            </span>
+                            {% endif %}
+                            <span class="fw-bold text-success fs-5">
+                                {{ product.price|floatformat:0 }}đ
+                            </span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="{% url 'product_detail' product.slug %}"
+                                class="btn btn-sm btn-outline-success flex-fill">
+                                <i class="fas fa-eye"></i> Chi tiết
+                            </a>
+                            {% if user.is_authenticated %}
+                            <form method="post" action="{% url 'add_to_cart' product.id %}" class="flex-fill">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-success w-100">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-muted">Chưa có sản phẩm nổi bật</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'product_list' %}" class="btn btn-primary">
+                Xem tất cả sản phẩm <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section py-5 bg-light rounded-4">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold">Giao hàng nhanh</h5>
+                    <p class="text-muted">Miễn phí ship nội thành</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold">Đảm bảo chất lượng</h5>
+                    <p class="text-muted">Cây khỏe, đúng mô tả</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item">
+                    <i class="fas fa-robot fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold">Nhận diện AI</h5>
+                    <p class="text-muted">Tìm cây qua hình ảnh</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item">
+                    <i class="fas fa-headset fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold">Hỗ trợ 24/7</h5>
+                    <p class="text-muted">Tư vấn chăm sóc cây</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.05));
+        border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .category-card {
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .category-card:hover {
+        background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.05));
+    }
+
+    .product-card {
+        transition: all 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+</style>
+{% endblock %}
