@@ -306,14 +306,14 @@ git push origin main
 
 ## 👥 Thành Viên Nhóm
 
-1. **Sinh viên 1** - Backend Developer
-2. **Sinh viên 2** - Frontend Developer  
-3. **Sinh viên 3** - AI Integration & Testing
+1. **Nguyễn Đắc Tuấn** - Backend Developer
+2. **Đàm Trường Vũ** - Frontend Developer  
+3. **Nguyễn Thị Mai Anh** - AI Integration & Testing
 
 ## 📞 Liên Hệ
 
 - **Email:** info@plantshop.com
-- **GitHub:** https://github.com/your-username/plant-shop
+- **GitHub:** https://github.com/Tuan/plant-shop
 
 ---
 
@@ -321,4 +321,4 @@ git push origin main
 
 Dự án này được phát triển cho mục đích học tập.
 
-**© 2024 Plant Shop - Nhóm Sinh Viên**
+**© 2026 Plant Shop - Nhóm 5**
