@@ -59,8 +59,8 @@ Xây dựng hệ thống website hoàn chỉnh cho phép:
 
 ### Bước 1: Clone dự án
 ```bash
-git clone https://github.com/your-username/plant-shop.git
-cd plant-shop
+git clone https://github.com/tuanlamviec007/plant_shop_website.git
+cd plant_shop_website
 ```
 
 ### Bước 2: Tạo Virtual Environment
@@ -313,7 +313,7 @@ git push origin main
 ## 📞 Liên Hệ
 
 - **Email:** info@plantshop.com
-- **GitHub:** https://github.com/Tuan/plant-shop
+- **GitHub:** https://github.com/tuanlamviec007/plant_shop_website
 
 ---
 
@@ -321,4 +321,4 @@ git push origin main
 
 Dự án này được phát triển cho mục đích học tập.
 
-**© 2026 Plant Shop - Nhóm 5python manage.py runserver**
+**© 2026 Plant Shop - Nhóm 5
