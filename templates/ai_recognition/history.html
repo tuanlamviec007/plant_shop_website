@@ -14,7 +14,9 @@
                         <th>Kết quả dự đoán</th>
                         <th>Độ chính xác</th>
                         <th>Sản phẩm gợi ý</th>
+                        <th>Danh mục</th>
                         <th>Thời gian</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +34,7 @@
                         <td>
                             <div class="progress" style="height: 20px;">
                                 <div class="progress-bar bg-success" role="progressbar"
-                                    style="width: {{ item.confidence|floatformat:0 }}%"
+                                    style="width: {{ item.confidence|default:0|floatformat:0 }}%"
                                     aria-valuenow="{{ item.confidence }}" aria-valuemin="0" aria-valuemax="100">
                                     {{ item.confidence }}%
                                 </div>
@@ -46,6 +48,13 @@
                             </a>
                             {% else %}
                             <span class="text-muted">Không tìm thấy</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.suggested_product and item.suggested_product.category %}
+                            <span class="badge bg-secondary">{{ item.suggested_product.category.name }}</span>
+                            {% else %}
+                            <span class="text-muted">-</span>
                             {% endif %}
                         </td>
                         <td>{{ item.created_at|date:"d/m/Y H:i" }}</td>

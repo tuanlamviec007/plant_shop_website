@@ -95,22 +95,3 @@ class Product(models.Model):
 
 
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.name
-
-    @property
-    def discount_percent(self):
-        """Tính % giảm giá"""
-        if self.original_price and self.original_price > self.price:
-            return int((1 - self.price / self.original_price) * 100)
-        return 0
-
-    @property
-    def in_stock(self):
-        """Kiểm tra còn hàng"""
-        return self.stock > 0

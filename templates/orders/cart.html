@@ -28,7 +28,7 @@
                                     <div class="d-flex align-items-center">
                                         <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}"
                                             style="width: 60px; height: 60px; object-fit: cover;" class="rounded me-3"
-                                            onerror="this.src='https://via.placeholder.com/60'">
+                                            onerror="this.src='https://placehold.co/600x400?text={{ item.product.name|urlencode }}'">
                                         <div>
                                             <h6 class="mb-0">{{ item.product.name }}</h6>
                                             <small class="text-muted">{{ item.product.category.name }}</small>

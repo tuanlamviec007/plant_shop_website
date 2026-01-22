@@ -39,7 +39,11 @@ def product_list(request):
     # Lọc theo danh mục
     category_id = request.GET.get('category')
     if category_id:
-        products = products.filter(category_id=category_id)
+        try:
+            category_id = int(category_id)
+            products = products.filter(category_id=category_id)
+        except ValueError:
+            category_id = None
 
     # Lọc theo độ khó chăm sóc
     care_level = request.GET.get('care')
@@ -112,10 +116,4 @@ def product_detail(request, slug):
 
 
 
-    context = {
-        'product': product,
-        'related_products': related_products,
-        'reviews': reviews,
-        'user_purchased': user_purchased,
-    }
-    return render(request, 'products/product_detail.html', context)
+

@@ -321,4 +321,4 @@ git push origin main
 
 Dự án này được phát triển cho mục đích học tập.
 
-**© 2026 Plant Shop - Nhóm 5**
+**© 2026 Plant Shop - Nhóm 5python manage.py runserver**

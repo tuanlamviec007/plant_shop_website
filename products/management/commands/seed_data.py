@@ -13,6 +13,10 @@ class Command(BaseCommand):
 
 
     def handle(self, *args, **kwargs):
+        from django.conf import settings
+        import os
+        from django.core.files import File
+
         self.stdout.write('Deleting old data...')
         Order.objects.all().delete()
         Cart.objects.all().delete()
@@ -76,17 +80,40 @@ class Command(BaseCommand):
         
         products = []
         for p in products_data:
-            prod = Product.objects.create(
-                category=cats[p['cat']],
-                name=p['name'],
-                description=f"Mô tả chi tiết cho {p['name']}. Cây khỏe mạnh, được tuyển chọn kỹ.",
-                price=p['price'],
-                original_price=p['price'] * 1.2,
-                stock=random.randint(5, 50),
-                care_level=p['care'],
-                is_featured=random.choice([True, False]),
-                image='products/default_plant.jpg' # Placeholder
-            )
+            # Check for local image in static/images
+            image_name = p['name'] + '.jpg'
+            # Special case for case-insensitive match if needed, but let's try direct first
+            if p['name'] == 'Terrarium Sa Mạc':
+                image_name = 'terrarium sa mạc.jpg'
+
+            static_image_path = os.path.join(settings.BASE_DIR, 'static', 'images', image_name)
+            
+            if os.path.exists(static_image_path):
+                with open(static_image_path, 'rb') as f:
+                    prod = Product.objects.create(
+                        category=cats[p['cat']],
+                        name=p['name'],
+                        description=f"Mô tả chi tiết cho {p['name']}. Cây khỏe mạnh, được tuyển chọn kỹ.",
+                        price=p['price'],
+                        original_price=p['price'] * 1.2,
+                        stock=random.randint(5, 50),
+                        care_level=p['care'],
+                        is_featured=random.choice([True, False]),
+                    )
+                    prod.image.save(image_name, File(f), save=True)
+            else:
+                 prod = Product.objects.create(
+                    category=cats[p['cat']],
+                    name=p['name'],
+                    description=f"Mô tả chi tiết cho {p['name']}. Cây khỏe mạnh, được tuyển chọn kỹ.",
+                    price=p['price'],
+                    original_price=p['price'] * 1.2,
+                    stock=random.randint(5, 50),
+                    care_level=p['care'],
+                    is_featured=random.choice([True, False]),
+                    image='products/default_plant.jpg' 
+                )
+            
             products.append(prod)
 
         # 4. Tạo Orders & Reviews
