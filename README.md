@@ -60,7 +60,7 @@ Xây dựng hệ thống website hoàn chỉnh cho phép:
 ### Bước 1: Clone dự án
 ```bash
 git clone https://github.com/tuanlamviec007/plant_shop_website.git
-cd plant-shop
+cd plant_shop_website
 ```
 
 ### Bước 2: Tạo Virtual Environment
