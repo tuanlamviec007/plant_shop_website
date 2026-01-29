@@ -1,0 +1,316 @@
+<!-- Chat Widget -->
+<div id="chat-widget-container">
+    <!-- Chat Button -->
+    <button id="chat-toggle-btn" class="chat-btn shadow-lg" onclick="toggleChat()">
+        <i class="fas fa-robot fa-lg"></i>
+        <span class="chat-btn-text">Tư vấn cây ngay!</span>
+    </button>
+
+    <!-- Chat Box -->
+    <div id="chat-box" class="chat-box shadow-lg d-none">
+        <div class="chat-header bg-success text-white d-flex justify-content-between align-items-center p-3">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-robot me-2"></i>
+                <h6 class="mb-0">Trợ Lý AI Plant Shop</h6>
+            </div>
+            <button type="button" class="btn-close btn-close-white" onclick="toggleChat()"></button>
+        </div>
+
+        <div id="chat-messages" class="chat-messages p-3">
+            <!-- Messages will appear here -->
+        </div>
+
+        <div id="chat-options" class="chat-options p-2 border-top bg-light">
+            <!-- Options buttons will appear here -->
+        </div>
+    </div>
+</div>
+
+<style>
+    #chat-widget-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1050;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .chat-btn {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 25px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .chat-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .chat-box {
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        width: 350px;
+        height: 500px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 10px 15px;
+        border-radius: 15px;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .message.bot {
+        background-color: #f1f3f5;
+        align-self: flex-start;
+        border-bottom-left-radius: 5px;
+    }
+
+    .message.user {
+        background-color: #e8f5e9;
+        /* Light Green */
+        color: #1b5e20;
+        align-self: flex-end;
+        border-bottom-right-radius: 5px;
+    }
+
+    .chat-options {
+        min-height: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .option-btn {
+        background-color: white;
+        border: 1px solid #28a745;
+        color: #28a745;
+        border-radius: 20px;
+        padding: 5px 15px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .option-btn:hover {
+        background-color: #28a745;
+        color: white;
+    }
+
+    /* Product Card in Chat */
+    .chat-product-card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 10px;
+        background: white;
+    }
+
+    .chat-product-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .chat-product-body {
+        padding: 10px;
+    }
+
+    .chat-product-price {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 576px) {
+        .chat-box {
+            width: 90vw;
+            right: 0;
+            bottom: 70px;
+        }
+    }
+</style>
+
+<script>
+    let chatStep = 'start';
+    let chatContext = {};
+    let isChatOpen = false;
+
+    function toggleChat() {
+        const chatBox = document.getElementById('chat-box');
+        isChatOpen = !isChatOpen;
+
+        if (isChatOpen) {
+            chatBox.classList.remove('d-none');
+            // If empty, start chat
+            if (document.getElementById('chat-messages').children.length === 0) {
+                sendChatRequest('start');
+            }
+        } else {
+            chatBox.classList.add('d-none');
+        }
+    }
+
+    function addMessage(text, sender) {
+        const messagesDiv = document.getElementById('chat-messages');
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `message ${sender}`;
+        msgDiv.innerText = text;
+        messagesDiv.appendChild(msgDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function addProductCard(product) {
+        const messagesDiv = document.getElementById('chat-messages');
+        const cardHtml = `
+            <div class="chat-product-card slide-in">
+                ${product.image_url ? `<img src="${product.image_url}" class="chat-product-img">` : ''}
+                <div class="chat-product-body">
+                    <h6 class="mb-1">${product.name}</h6>
+                    <div class="chat-product-price mb-2">${new Intl.NumberFormat('vi-VN').format(product.price)}đ</div>
+                    <a href="${product.url}" class="btn btn-sm btn-success w-100">Xem chi tiết</a>
+                </div>
+            </div>
+        `;
+        const container = document.createElement('div');
+        container.style.alignSelf = 'flex-start'; // Align left like bot message
+        container.style.maxWidth = '85%';
+        container.innerHTML = cardHtml;
+        messagesDiv.appendChild(container);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function renderOptions(options) {
+        const optionsDiv = document.getElementById('chat-options');
+        optionsDiv.innerHTML = '';
+
+        if (!options) return;
+
+        options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.innerText = opt.text;
+            btn.onclick = () => handleOptionClick(opt);
+            optionsDiv.appendChild(btn);
+        });
+    }
+
+    function handleOptionClick(option) {
+        // User selection
+        addMessage(option.text, 'user');
+
+        // Disable old options
+        document.getElementById('chat-options').innerHTML = '';
+
+        if (option.value === 'restart') {
+            document.getElementById('chat-messages').innerHTML = ''; // Clear chat
+            chatStep = 'start';
+            chatContext = {};
+            sendChatRequest('start');
+            return;
+        }
+
+        if (option.value === 'view_product') {
+            window.location.href = option.url;
+            return;
+        }
+
+        // Send to API
+        sendChatRequest(chatStep, option.value);
+    }
+
+    async function sendChatRequest(currentStep, answer = null) {
+        // Show typing indicator? (Optional)
+
+        try {
+            const response = await fetch('/ai-recognition/chat-api/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    step: currentStep,
+                    answer: answer,
+                    context: chatContext
+                })
+            });
+
+            if (!response.ok) throw new Error('API Error');
+
+            const data = await response.json();
+
+            // Update State
+            chatStep = data.next_step;
+
+            // Display Bot Message
+            setTimeout(() => {
+                addMessage(data.message, 'bot');
+
+                // If product result
+                if (data.product) {
+                    addProductCard(data.product);
+                }
+
+                renderOptions(data.options);
+            }, 500); // Fake delay for realism
+
+        } catch (error) {
+            console.error('Chat Error:', error);
+            addMessage("Xin lỗi, có lỗi kết nối. Vui lòng thử lại sau.", 'bot');
+            renderOptions([{ text: 'Thử lại', value: 'restart' }]);
+        }
+    }
+
+    // Helper to get CSRF
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>

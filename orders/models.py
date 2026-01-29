@@ -71,7 +71,7 @@ class Order(models.Model):
 class OrderItem(models.Model):
     """Chi tiết đơn hàng"""
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
-    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, blank=True)
     product_name = models.CharField(max_length=200)  # Lưu tên tại thời điểm đặt
     quantity = models.IntegerField()
     price = models.DecimalField(max_digits=10, decimal_places=0)  # Giá tại thời điểm đặt

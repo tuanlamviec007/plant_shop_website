@@ -35,6 +35,37 @@ class Product(models.Model):
         ('medium', 'Trung bình'),
         ('hard', 'Khó'),
     ]
+    
+    LIGHT_CONDITION_CHOICES = [
+        ('high', 'Nhiều ánh sáng'),
+        ('medium', 'Ánh sáng vừa phải'),
+        ('low', 'Ít ánh sáng'),
+        ('shade', 'Bóng râm'),
+    ]
+    
+    LOCATION_TYPE_CHOICES = [
+        ('indoor', 'Trong nhà'),
+        ('outdoor', 'Ngoài trời'),
+        ('both', 'Cả hai'),
+    ]
+    
+    SPACE_REQUIRED_CHOICES = [
+        ('small', 'Nhỏ (< 1m²)'),
+        ('medium', 'Vừa (1-3m²)'),
+        ('large', 'Lớn (> 3m²)'),
+    ]
+    
+    CARE_TIME_CHOICES = [
+        ('low', 'Ít thời gian'),
+        ('medium', 'Thời gian vừa phải'),
+        ('high', 'Nhiều thời gian'),
+    ]
+    
+    EXPERIENCE_LEVEL_CHOICES = [
+        ('beginner', 'Người mới bắt đầu'),
+        ('intermediate', 'Trung bình'),
+        ('expert', 'Có kinh nghiệm'),
+    ]
 
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name='products')
     name = models.CharField(max_length=200, verbose_name="Tên sản phẩm")
@@ -47,10 +78,26 @@ class Product(models.Model):
     stock = models.IntegerField(default=0, verbose_name="Tồn kho")
     sold_count = models.IntegerField(default=0, verbose_name="Đã bán")
 
-    # Thông tin chăm sóc
+    # Thông tin chăm sóc cơ bản
     care_level = models.CharField(max_length=20, choices=CARE_LEVEL_CHOICES, default='easy')
     light_requirement = models.CharField(max_length=100, blank=True, verbose_name="Ánh sáng")
     water_frequency = models.CharField(max_length=100, blank=True, verbose_name="Tưới nước")
+    
+    # Thông tin cho hệ thống gợi ý
+    light_condition = models.CharField(max_length=20, choices=LIGHT_CONDITION_CHOICES, blank=True,
+                                       verbose_name="Điều kiện ánh sáng")
+    location_type = models.CharField(max_length=20, choices=LOCATION_TYPE_CHOICES, blank=True,
+                                     verbose_name="Vị trí")
+    space_required = models.CharField(max_length=20, choices=SPACE_REQUIRED_CHOICES, blank=True,
+                                      verbose_name="Diện tích cần")
+    care_time = models.CharField(max_length=20, choices=CARE_TIME_CHOICES, blank=True,
+                                 verbose_name="Thời gian chăm sóc")
+    experience_level = models.CharField(max_length=20, choices=EXPERIENCE_LEVEL_CHOICES, blank=True,
+                                        verbose_name="Mức độ kinh nghiệm")
+    feng_shui_meaning = models.CharField(max_length=200, blank=True,
+                                         verbose_name="Ý nghĩa phong thủy")
+    care_tips = models.TextField(blank=True, verbose_name="Hướng dẫn chăm sóc")
+
 
     # Đánh giá
     rating_avg = models.DecimalField(max_digits=3, decimal_places=2, default=0)

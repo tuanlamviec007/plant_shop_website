@@ -155,7 +155,7 @@ plant_shop/
 │   ├── models.py              # Review
 │   └── views.py
 │
-├── ai_recognition/             # App AI Nhận diện
+├── plant_recommendation/       # App Gợi Ý Cây Cảnh (AI Recommendation)
 │   ├── models.py              # PlantRecognition
 │   └── views.py
 │
