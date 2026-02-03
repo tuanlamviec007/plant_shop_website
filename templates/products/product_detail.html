@@ -39,8 +39,9 @@
 
             <div class="mb-4">
                 {% if product.original_price %}
-                <span class="text-muted text-decoration-line-through fs-5 me-2">{{ product.original_price|floatformat:0
-                    }}đ</span>
+                <span class="text-muted text-decoration-line-through fs-5 me-2">
+                    {{ product.original_price|floatformat:0 }}đ
+                </span>
                 {% endif %}
                 <span class="text-success fw-bold display-6">{{ product.price|floatformat:0 }}đ</span>
             </div>

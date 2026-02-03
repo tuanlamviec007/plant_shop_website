@@ -1,154 +1,147 @@
 """
-AI Recommendation Service - Decision Tree Chatbot
+AI Recommendation Service - NLP Implementation
 """
 import os
-
-import pandas as pd
+import json
+import unicodedata
+import re
 from django.conf import settings
+from django.db.models import Q
 from products.models import Product
 
-# Load Data (Lazy loading)
-CSV_PATH = os.path.join(settings.BASE_DIR, 'data', 'plants_10_limited.csv')
-_df = None
+# Path to config file
+CONFIG_PATH = os.path.join(settings.BASE_DIR, 'plant_recommendation', 'chatbot_config.json')
+_config = None
 
-def _load_data():
-    global _df
-    if _df is None:
+def _load_config():
+    """Load configuraton from JSON file"""
+    global _config
+    if _config is None:
         try:
-            _df = pd.read_csv(CSV_PATH)
-            # Normalize data for easier matching
-            _df['light'] = _df['light'].str.lower().str.strip()
-            _df['location'] = _df['location'].str.lower().str.strip()
-            _df['care'] = _df['care'].str.lower().str.strip()
+            with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
+                _config = json.load(f)
         except Exception as e:
-            print(f"❌ Data load error: {e}")
-            return False
-    return True
+            print(f"❌ Config load error: {e}")
+            # Fallback default config to prevent crash
+            _config = {"intents": {}, "filters": {}}
+    return _config
 
-def predict_plant(preferences):
+def _normalize_text(text):
+    """Normalize text: remove accents, lowercase, remove special chars"""
+    if not text:
+        return ""
+    text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
+    text = text.lower()
+    text = re.sub(r'[^\w\s]', '', text)
+    return text.strip()
+
+def _extract_intents_and_filters(user_input):
     """
-    Dự đoán cây phù hợp (Logic lọc tương đương Decision Tree)
+    Analyze user input to find intents and filter criteria
     """
-    if not _load_data():
-        return None
-
-    try:
-        # Filter logic
-        # 1. Exact Match
-        matches = _df[
-            (_df['light'] == preferences['light']) &
-            (_df['care'] == preferences['care']) &
-            ((_df['location'] == preferences['location']) | (_df['location'] == 'both'))
-        ]
-        
-        # 2. Relaxed Match (nếu không tìm thấy chính xác)
-        if matches.empty:
-             matches = _df[
-                (_df['location'] == preferences['location']) | (_df['location'] == 'both')
-            ]
-        
-        if matches.empty:
-             # Fallback to any plant
-             plant_name_key = _df.iloc[0]['name']
-        else:
-             plant_name_key = matches.iloc[0]['name']
-        
-        # Find Product in DB
-        product = Product.objects.filter(name__icontains=plant_name_key).first()
-        
-        reason = (
-            f"Dựa trên lựa chọn: {preferences['location']}, {preferences['light']} sáng, {preferences['care']} chăm sóc.\n"
-            f"AI đề xuất: {plant_name_key}"
-        )
-
-        return {
-            'plant_name': plant_name_key,
-            'product': product,
-            'reason': reason
-        }
-
-    except Exception as e:
-        print(f"Prediction Error: {e}")
-        return None
-
-
-
-def chatbot_response(step, user_answer=None, context=None):
-    """
-    Xử lý logic hội thoại theo luồng Decision Tree
+    config = _load_config()
+    norm_input = _normalize_text(user_input)
+    words = norm_input.split()
     
-    Returns:
-        dict: {
-            'message': str,
-            'options': list, # [{'text': 'Trong nhà', 'value': 'indoor'}]
-            'next_step': str or None,
-            'result': dict (optional)
-        }
-    """
-    context = context or {}
-    
-    # Kịch bản hội thoại
-    if step == 'start':
-        return {
-            'message': "Chào bạn! Tôi là trợ lý AI tìm cây cảnh. Để bắt đầu, hãy cho biết bạn định đặt cây ở đâu?",
-            'options': [
-                {'text': 'Trong nhà', 'value': 'indoor'},
-                {'text': 'Ngoài trời', 'value': 'outdoor'},
-                {'text': 'Cả hai', 'value': 'both'}
-            ],
-            'next_step': 'ask_light'
-        }
-    
-    elif step == 'ask_light':
-        context['location'] = user_answer
-        return {
-            'message': "Tuyệt! Còn điều kiện ánh sáng chỗ đó thế nào?",
-            'options': [
-                {'text': 'Nhiều nắng', 'value': 'high'},
-                {'text': 'Vừa phải', 'value': 'medium'},
-                {'text': 'Ít nắng / Bóng râm', 'value': 'low'}, # Mapping low/shade in dataset -> low for simplicity
-                {'text': 'Rất ít (Chỉ đèn điện)', 'value': 'shade'} 
-            ],
-            'next_step': 'ask_care'
-        }
-        
-    elif step == 'ask_care':
-        context['light'] = user_answer
-        return {
-            'message': "Câu hỏi cuối nhé: Bạn có nhiều thời gian chăm sóc cây không?",
-            'options': [
-                {'text': 'Rất ít (Bận rộn)', 'value': 'low'},
-                {'text': 'Thỉnh thoảng', 'value': 'medium'},
-                {'text': 'Nhiều (Yêu chăm cây)', 'value': 'high'}
-            ],
-            'next_step': 'result'
-        }
-        
-    elif step == 'result':
-        context['care'] = user_answer
-        
-        # Normalize input if needed (dataset uses 'shade' and 'low')
-        # If user selected 'shade', keep it. If 'low', keep it.
-        
-        result = predict_plant(context)
-        
-        if result and result['product']:
-            msg = f"Xong! {result['reason']}"
-            return {
-                'message': msg,
-                'options': [
-                    {'text': 'Tìm cây khác', 'value': 'restart'},
-                    {'text': 'Xem chi tiết', 'value': 'view_product', 'url': result['product'].get_absolute_url()}
-                ],
-                'next_step': 'finish',
-                'product': result['product']
-            }
-        else:
-            # Fallback nếu model fail hoặc ko tìm thấy cây
-            return {
-                'message': "Xin lỗi, hiện tại tôi chưa tìm thấy cây nào khớp hoàn toàn với tiêu chí này trong bộ dữ liệu 10 cây mẫu. Bạn thử thay đổi tiêu chí nhé!",
-                'options': [{'text': 'Thử lại', 'value': 'restart'}],
-                'next_step': 'start'
-            }
+    intent = None
+    detected_filters = {}
+
+    # 1. Detect Intent
+    for int_name, keywords in config.get('intents', {}).items():
+        for kw in keywords:
+            # Check if keyword exists in normalized input
+            # Simple check: kw in norm_input
+            if kw in norm_input:
+                intent = int_name
+                break
+        if intent:
+            break
             
-    return {'message': "Lỗi hệ thống.", 'next_step': 'start'}
+    # Default to recommendation if unknown but has filters, or just generic interaction
+    if not intent:
+        intent = 'recommendation'
+
+    # 2. Detect Filters
+    filter_config = config.get('filters', {})
+    for field, options in filter_config.items():
+        for value, keywords in options.items():
+            for kw in keywords:
+                # Use regex boundry or simple inclusion? simple inclusion for now
+                if kw in norm_input:
+                    detected_filters[field] = value
+                    break # prioritize first match for this field
+    
+    return intent, detected_filters
+
+def chatbot_response(request_message, context=None):
+    """
+    Main entry point for chatbot.
+    request_message: str (User's text input)
+    context: dict (History/session context - optional)
+    """
+    config = _load_config()
+    intent, filters = _extract_intents_and_filters(request_message)
+    
+    # Logic Processing
+    if intent == 'greeting' and not filters:
+        return {
+            'message': config['responses']['greeting'],
+            'data': []
+        }
+        
+    # Query Database
+    products = Product.objects.filter(is_active=True)
+    
+    # Apply detected filters
+    if filters:
+        query_q = Q()
+        for field, value in filters.items():
+            # Construct dynamic Q object: field__exact=value
+            query_q &= Q(**{field: value})
+        
+        products = products.filter(query_q)
+        
+        # Explain what we understood
+        understanding = []
+        if 'location_type' in filters:
+            understanding.append(f"vị trí {filters['location_type']}")
+        if 'care_level' in filters:
+            understanding.append(f"chăm sóc {_translate_care(filters['care_level'])}")
+        # ... more explanations if needed
+    
+    # Get results
+    results = products.order_by('-is_featured', 'price')[:5] # Top 5
+    
+    if not results.exists():
+         return {
+            'message': config['responses']['no_result'],
+            'data': []
+        }
+    
+    # Format response
+    response_products = []
+    for p in results:
+        response_products.append({
+            'id': p.id,
+            'name': p.name,
+            'price': float(p.price),
+            'original_price': float(p.original_price) if p.original_price else None,
+            'image_url': p.image.url if p.image else '',
+            'url': f"/products/{p.slug}/" # Simple URL construction or use get_absolute_url if model method available in context
+        })
+        
+    msg = f"Mình tìm thấy {len(results)} cây phù hợp với bạn:"
+    if filters:
+        msg = f"Theo yêu cầu của bạn, mình gợi ý:"
+        
+    return {
+        'message': msg,
+        'data': response_products,
+        'filters_detected': filters 
+    }
+
+def _translate_care(val):
+    """Helper to translate internal codes slightly for debug/echo"""
+    if val == 'easy': return 'dễ'
+    if val == 'hard': return 'khó'
+    return val
