@@ -1,0 +1,52 @@
+[
+    {
+        "id": 52,
+        "name": "cây móng rồng",
+        "slug": "cay-mong-rong"
+    },
+    {
+        "id": 50,
+        "name": "cây phú quý",
+        "slug": "cay-phu-quy"
+    },
+    {
+        "id": 26,
+        "name": "cây quất",
+        "slug": "cay-quat"
+    },
+    {
+        "id": 46,
+        "name": "cây tùng thơm",
+        "slug": "cay-tung-thom"
+    },
+    {
+        "id": 38,
+        "name": "cây ngọc ngân",
+        "slug": "cay-ngoc-ngan"
+    },
+    {
+        "id": 20,
+        "name": "cây trầu bà đế vương",
+        "slug": "cay-trau-ba-e-vuong"
+    },
+    {
+        "id": 41,
+        "name": "cây hoa lan",
+        "slug": "cay-hoa-lan"
+    },
+    {
+        "id": 39,
+        "name": "cây hạnh phúc",
+        "slug": "cay-hanh-phuc"
+    },
+    {
+        "id": 48,
+        "name": "cây hồng môn",
+        "slug": "cay-hong-mon"
+    },
+    {
+        "id": 25,
+        "name": "cây mai vàng",
+        "slug": "cay-mai-vang"
+    }
+]

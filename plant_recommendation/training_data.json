@@ -1,0 +1,938 @@
+[
+    {
+        "text": "chào shop",
+        "intent": "greeting"
+    },
+    {
+        "text": "hi",
+        "intent": "greeting"
+    },
+    {
+        "text": "hello",
+        "intent": "greeting"
+    },
+    {
+        "text": "xin chào",
+        "intent": "greeting"
+    },
+    {
+        "text": "chào bạn",
+        "intent": "greeting"
+    },
+    {
+        "text": "có ai ở đây không",
+        "intent": "greeting"
+    },
+    {
+        "text": "shop ơi",
+        "intent": "greeting"
+    },
+    {
+        "text": "alo",
+        "intent": "greeting"
+    },
+    {
+        "text": "chào buổi sáng",
+        "intent": "greeting"
+    },
+    {
+        "text": "tư vấn cho mình với",
+        "intent": "recommendation"
+    },
+    {
+        "text": "mình muốn mua cây",
+        "intent": "recommendation"
+    },
+    {
+        "text": "shop gợi ý cây đi",
+        "intent": "recommendation"
+    },
+    {
+        "text": "có cây nào đẹp không",
+        "intent": "recommendation"
+    },
+    {
+        "text": "giới thiệu vài cây xem nào",
+        "intent": "recommendation"
+    },
+    {
+        "text": "tìm giúp mình một cây",
+        "intent": "recommendation"
+    },
+    {
+        "text": "mình cần mua cây cảnh",
+        "intent": "recommendation"
+    },
+    {
+        "text": "bán cho mình cây",
+        "intent": "recommendation"
+    },
+    {
+        "text": "mình muốn mua cây móng rồng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "có bán cây móng rồng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "giá cây móng rồng bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "cho xem cây móng rồng với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "tìm cây móng rồng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "hỏi về cây móng rồng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "cây móng rồng còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "cây móng rồng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây móng rồng"
+        }
+    },
+    {
+        "text": "mình muốn mua cây phú quý",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "có bán cây phú quý không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "giá cây phú quý bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "cho xem cây phú quý với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "tìm cây phú quý",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "hỏi về cây phú quý",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây phú quý còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây phú quý",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "mình muốn mua cây quất",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "có bán cây quất không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "giá cây quất bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "cho xem cây quất với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "tìm cây quất",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "hỏi về cây quất",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "cây quất còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "cây quất",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây quất"
+        }
+    },
+    {
+        "text": "mình muốn mua cây tùng thơm",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "có bán cây tùng thơm không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "giá cây tùng thơm bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "cho xem cây tùng thơm với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "tìm cây tùng thơm",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "hỏi về cây tùng thơm",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "cây tùng thơm còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "cây tùng thơm",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây tùng thơm"
+        }
+    },
+    {
+        "text": "mình muốn mua cây ngọc ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "có bán cây ngọc ngân không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "giá cây ngọc ngân bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "cho xem cây ngọc ngân với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "tìm cây ngọc ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "hỏi về cây ngọc ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "cây ngọc ngân còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "cây ngọc ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây ngọc ngân"
+        }
+    },
+    {
+        "text": "mình muốn mua cây trầu bà đế vương",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "có bán cây trầu bà đế vương không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "giá cây trầu bà đế vương bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "cho xem cây trầu bà đế vương với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "tìm cây trầu bà đế vương",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "hỏi về cây trầu bà đế vương",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "cây trầu bà đế vương còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "cây trầu bà đế vương",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà đế vương"
+        }
+    },
+    {
+        "text": "mình muốn mua cây hoa lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "có bán cây hoa lan không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "giá cây hoa lan bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "cho xem cây hoa lan với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "tìm cây hoa lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "hỏi về cây hoa lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "cây hoa lan còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "cây hoa lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hoa lan"
+        }
+    },
+    {
+        "text": "mình muốn mua cây hạnh phúc",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "có bán cây hạnh phúc không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "giá cây hạnh phúc bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "cho xem cây hạnh phúc với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "tìm cây hạnh phúc",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "hỏi về cây hạnh phúc",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "cây hạnh phúc còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "cây hạnh phúc",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hạnh phúc"
+        }
+    },
+    {
+        "text": "mình muốn mua cây hồng môn",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "có bán cây hồng môn không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "giá cây hồng môn bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "cho xem cây hồng môn với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "tìm cây hồng môn",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "hỏi về cây hồng môn",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "cây hồng môn còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "cây hồng môn",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây hồng môn"
+        }
+    },
+    {
+        "text": "mình muốn mua cây mai vàng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "có bán cây mai vàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "giá cây mai vàng bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "cho xem cây mai vàng với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "tìm cây mai vàng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "hỏi về cây mai vàng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "cây mai vàng còn hàng không shop",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "cây mai vàng",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây mai vàng"
+        }
+    },
+    {
+        "text": "cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tư vấn cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cho mình xem cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tư vấn trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cho mình xem trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    }
+]
