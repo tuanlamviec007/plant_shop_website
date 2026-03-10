@@ -14,16 +14,25 @@ django.setup()
 from products.models import Product
 
 def generate_training_data():
-    # Lấy ngẫu nhiên 10 sản phẩm đang active
-    products = list(Product.objects.filter(is_active=True).order_by('?')[:10])
+    plants_req = [
+        'Cây kim tiền', 'Cây lưỡi hổ', 'Cây kim ngân', 'Cây thường xuân', 
+        'Cây thiết mộc lan', 'Cây vạn niên thanh', 'Cây trầu bà', 
+        'Cây phú quý', 'Cây lan ý', 'Cây sung'
+    ]
     
-    if len(products) < 1:
-        print("Không có sản phẩm nào trong database!")
-        return
+    # Lấy chính xác 10 cây
+    products = []
+    for name in plants_req:
+        p = Product.objects.filter(name__icontains=name).first()
+        if p:
+            products.append(p)
+            
+    if len(products) < 10:
+        print(f"Cảnh báo: Chỉ tìm thấy {len(products)}/10 cây cần thiết trong database!")
 
-    print("Đã chọn ngẫu nhiên 10 cây:")
+    print("Danh sách cây sẽ sử dụng:")
     for p in products:
-        print(f"- {p.name} (Location: {p.location_type}, Care: {p.care_level})")
+        print(f"- {p.name}")
     
     training_data = []
 
@@ -44,28 +53,103 @@ def generate_training_data():
     for text in recommends:
         training_data.append({"text": text, "intent": "recommendation"})
         
-    # 3. Intent: ask_specific_plant (Dựa vào 10 cây ngẫu nhiên)
+    # Sinh dữ liệu cho từng cây
     for p in products:
         name_lower = p.name.lower()
-        phrases = [
-            f"mình muốn mua {name_lower}",
-            f"có bán {name_lower} không",
+        
+        # --- Danh mục 3: Câu hỏi Mua Hàng (Shopping) ---
+        # Intent: ask_specific_plant
+        phrases_shopping = [
             f"giá {name_lower} bao nhiêu",
+            f"shop có bán {name_lower} không",
+            f"{name_lower} còn hàng không",
+            f"tôi muốn mua {name_lower}",
+            f"{name_lower} có size nào",
+            f"{name_lower} giá bao nhiêu tiền",
             f"cho xem {name_lower} với",
             f"tìm {name_lower}",
-            f"hỏi về {name_lower}",
-            f"{name_lower} còn hàng không shop",
             name_lower
         ]
-        for text in phrases:
-            # We add entity annotations or just simple intent
+        for text in phrases_shopping:
             training_data.append({
                 "text": text, 
                 "intent": "ask_specific_plant",
-                "entities": {"plant_name": name_lower} # Optional for logic processing
+                "entities": {"plant_name": name_lower}
+            })
+            
+        # --- Danh mục 1: Câu hỏi Chung (General) ---
+        # Intent: ask_plant_characteristics (characteristic_type = general)
+        phrases_general = [
+            f"{name_lower} là cây gì",
+            f"đặc điểm của {name_lower} là gì",
+            f"đặc điểm {name_lower}",
+            f"{name_lower} có ý nghĩa phong thủy gì",
+            f"ý nghĩa phong thủy {name_lower}",
+            f"{name_lower} có dễ trồng không",
+            f"{name_lower} có phù hợp trồng trong nhà không",
+            f"trồng {name_lower} trong nhà",
+            f"{name_lower} có độc không",
+            f"{name_lower} có tác dụng gì",
+            f"hỏi về {name_lower}",
+            f"thông tin {name_lower}"
+        ]
+        for text in phrases_general:
+             training_data.append({
+                "text": text, 
+                "intent": "ask_plant_characteristics",
+                "entities": {"plant_name": name_lower}
+            })
+             
+        # --- Danh mục 2: Câu hỏi Chăm Sóc (Care) ---
+        # Intent: ask_plant_characteristics (characteristic_type = care/water/light...)
+        phrases_care = [
+            f"cách chăm sóc {name_lower}",
+            f"chăm sóc {name_lower} như thế nào",
+            f"cách chăm {name_lower}",
+            f"{name_lower} cần tưới nước bao nhiêu lần",
+            f"{name_lower} tưới nước sao",
+            f"tưới {name_lower} như nào",
+            f"{name_lower} cần ánh sáng như thế nào",
+            f"ánh sáng cho {name_lower}",
+            f"{name_lower} cần nắng không",
+            f"{name_lower} có cần bón phân không",
+            f"bón phân cho {name_lower}",
+            f"nhiệt độ thích hợp cho {name_lower}",
+            f"{name_lower} chịu nhiệt độ",
+            f"{name_lower} trồng trong nhà được không",
+            f"{name_lower} có cần thay chậu không",
+            f"thay chậu {name_lower}"
+        ]
+        for text in phrases_care:
+             training_data.append({
+                "text": text, 
+                "intent": "ask_plant_characteristics",
+                "entities": {"plant_name": name_lower}
             })
 
-    # 4. Intent: find_by_location
+    # --- Danh mục 4: Câu hỏi So Sánh (Comparison) ---
+    # Intent: compare_plants
+    for i in range(len(products)):
+        for j in range(i + 1, len(products)):
+            p1 = products[i].name.lower()
+            p2 = products[j].name.lower()
+            
+            phrases_comparison = [
+                f"{p1} và {p2} khác nhau như thế nào",
+                f"nên trồng {p1} hay {p2}",
+                f"cây nào dễ chăm hơn: {p1} hay {p2}",
+                f"so sánh {p1} và {p2}",
+                f"{p1} với {p2} nên mua cây nào"
+            ]
+            
+            for text in phrases_comparison:
+                training_data.append({
+                    "text": text, 
+                    "intent": "compare_plants",
+                    "entities": {"plant_1": p1, "plant_2": p2}
+                })
+
+    # Intent: find_by_location
     location_phrases = {
         "indoor": ["cây để trong nhà", "cây trồng trong phòng", "cây nội thất", "cây để bàn làm việc", "cây văn phòng"],
         "outdoor": ["cây trồng ngoài trời", "cây sân vườn", "cây ban công", "cây trồng trước hiên"],
@@ -74,14 +158,10 @@ def generate_training_data():
     for loc, phrases in location_phrases.items():
         for text in phrases:
             training_data.append({"text": text, "intent": "find_by_location", "entities": {"location_type": loc}})
-            
-    # Mix and match with Recommendation
-    for loc, phrases in location_phrases.items():
-        for text in phrases:
             training_data.append({"text": f"tư vấn {text}", "intent": "find_by_location", "entities": {"location_type": loc}})
             training_data.append({"text": f"cho mình xem {text}", "intent": "find_by_location", "entities": {"location_type": loc}})
 
-    # 5. Intent: find_by_care_level
+    # Intent: find_by_care_level
     care_phrases = {
         "easy": ["cây dễ chăm", "cây ít chăm sóc", "cây cho người lười", "cây sống dai", "cây dễ sống", "cây không cần chăm nhiều"],
         "medium": ["cây chăm sóc trung bình", "cây bình thường"],
@@ -91,8 +171,6 @@ def generate_training_data():
         for text in phrases:
             training_data.append({"text": text, "intent": "find_by_care_level", "entities": {"care_level": care}})
 
-    # Mix and match location and care level? Keep it simple for TF-IDF.
-    
     # Save to JSON
     output_path = os.path.join(script_dir, "training_data.json")
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -100,13 +178,13 @@ def generate_training_data():
         
     print(f"Đã tạo {len(training_data)} mẫu dữ liệu huấn luyện tại {output_path}")
     
-    # Save the 10 selected plants for reference in training / logic
+    # Save the selected plants for reference in training / logic
     selected_plants = [{"id": p.id, "name": p.name.lower(), "slug": p.slug} for p in products]
     config_path = os.path.join(script_dir, "selected_plants.json")
     with open(config_path, 'w', encoding='utf-8') as f:
         json.dump(selected_plants, f, ensure_ascii=False, indent=4)
         
-    print(f"Đã lưu danh sách 10 cây ngẫu nhiên tại {config_path}")
+    print(f"Đã lưu danh sách {len(products)} cây tại {config_path}")
 
 if __name__ == "__main__":
     generate_training_data()

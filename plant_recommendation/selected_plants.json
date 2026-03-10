@@ -1,8 +1,38 @@
 [
     {
-        "id": 52,
-        "name": "cây móng rồng",
-        "slug": "cay-mong-rong"
+        "id": 54,
+        "name": "cây kim tiền",
+        "slug": "cay-kim-tin"
+    },
+    {
+        "id": 19,
+        "name": "cây lưỡi hổ",
+        "slug": "cay-luoi-ho"
+    },
+    {
+        "id": 28,
+        "name": "cây kim ngân",
+        "slug": "cay-kim-ngan"
+    },
+    {
+        "id": 58,
+        "name": "cây thường xuân",
+        "slug": "cay-thng-xuan"
+    },
+    {
+        "id": 35,
+        "name": "cây thiết mộc lan",
+        "slug": "cay-thiet-moc-lan"
+    },
+    {
+        "id": 40,
+        "name": "cây vạn niên thanh",
+        "slug": "cay-van-nien-thanh"
+    },
+    {
+        "id": 30,
+        "name": "cây trầu bà",
+        "slug": "cay-trau-ba"
     },
     {
         "id": 50,
@@ -10,43 +40,13 @@
         "slug": "cay-phu-quy"
     },
     {
-        "id": 26,
-        "name": "cây quất",
-        "slug": "cay-quat"
+        "id": 56,
+        "name": "cây lan ý",
+        "slug": "cay-lan-y-1"
     },
     {
-        "id": 46,
-        "name": "cây tùng thơm",
-        "slug": "cay-tung-thom"
-    },
-    {
-        "id": 38,
-        "name": "cây ngọc ngân",
-        "slug": "cay-ngoc-ngan"
-    },
-    {
-        "id": 20,
-        "name": "cây trầu bà đế vương",
-        "slug": "cay-trau-ba-e-vuong"
-    },
-    {
-        "id": 41,
-        "name": "cây hoa lan",
-        "slug": "cay-hoa-lan"
-    },
-    {
-        "id": 39,
-        "name": "cây hạnh phúc",
-        "slug": "cay-hanh-phuc"
-    },
-    {
-        "id": 48,
-        "name": "cây hồng môn",
-        "slug": "cay-hong-mon"
-    },
-    {
-        "id": 25,
-        "name": "cây mai vàng",
-        "slug": "cay-mai-vang"
+        "id": 57,
+        "name": "cây sung",
+        "slug": "cay-sung"
     }
 ]

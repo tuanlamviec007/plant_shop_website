@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block title %}Trang chủ - Plant Shop{% endblock %}
 
@@ -33,35 +34,7 @@
         </div>
     </section>
 
-    <!-- Categories -->
-    <section class="categories-section mb-5">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold">Danh Mục Cây Cảnh</h2>
-            <p class="text-muted">Chọn loại cây phù hợp với không gian của bạn</p>
-        </div>
-        <div class="row g-4">
-            {% for category in categories %}
-            <div class="col-md-4">
-                <a href="{% url 'product_list' %}?category={{ category.id }}" class="text-decoration-none">
-                    <div class="card h-100 category-card">
-                        <div class="card-body text-center p-4">
-                            <div class="category-icon mb-3">
-                                <i class="fas fa-leaf fa-3x" style="color: var(--primary-color);"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">{{ category.name }}</h5>
-                            <p class="card-text text-muted">{{ category.description|truncatewords:10 }}</p>
-                            <span class="badge bg-success">{{ category.products.count }} sản phẩm</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {% empty %}
-            <div class="col-12 text-center">
-                <p class="text-muted">Chưa có danh mục nào</p>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
+    <!-- Đã xóa trắng phần danh mục/sản phẩm nổi bật ở đầu trang chủ -->
 
     <!-- Featured Products -->
     <section class="featured-products mb-5">
@@ -78,9 +51,14 @@
                         -{{ product.discount_percent }}%
                     </span>
                     {% endif %}
+                    {% if product.image %}
                     <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"
                         style="height: 200px; object-fit: cover;"
                         onerror="this.src='https://placehold.co/300x200?text={{ product.name|urlencode }}'">
+                    {% else %}
+                    <img src="https://placehold.co/300x200?text={{ product.name|urlencode }}" class="card-img-top" alt="{{ product.name }}"
+                        style="height: 200px; object-fit: cover;">
+                    {% endif %}
                     <div class="card-body">
                         <h6 class="card-title fw-bold">{{ product.name }}</h6>
                         <p class="text-muted small mb-2">{{ product.category.name }}</p>
@@ -98,11 +76,11 @@
                         <div class="mb-2">
                             {% if product.original_price %}
                             <span class="text-decoration-line-through text-muted me-2">
-                                {{ product.original_price|floatformat:0 }}đ
+                                {{ product.original_price|intcomma }}đ
                             </span>
                             {% endif %}
                             <span class="fw-bold text-success fs-5">
-                                {{ product.price|floatformat:0 }}đ
+                                {{ product.price|intcomma }}đ
                             </span>
                         </div>
                         <div class="d-flex gap-2">

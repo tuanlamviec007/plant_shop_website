@@ -68,77 +68,1855 @@
         "intent": "recommendation"
     },
     {
-        "text": "mình muốn mua cây móng rồng",
+        "text": "giá cây kim tiền bao nhiêu",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "có bán cây móng rồng không",
+        "text": "shop có bán cây kim tiền không",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "giá cây móng rồng bao nhiêu",
+        "text": "cây kim tiền còn hàng không",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "cho xem cây móng rồng với",
+        "text": "tôi muốn mua cây kim tiền",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "tìm cây móng rồng",
+        "text": "cây kim tiền có size nào",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "hỏi về cây móng rồng",
+        "text": "cây kim tiền giá bao nhiêu tiền",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "cây móng rồng còn hàng không shop",
+        "text": "cho xem cây kim tiền với",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "cây móng rồng",
+        "text": "tìm cây kim tiền",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây móng rồng"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "mình muốn mua cây phú quý",
+        "text": "cây kim tiền",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây phú quý"
+            "plant_name": "cây kim tiền"
         }
     },
     {
-        "text": "có bán cây phú quý không",
+        "text": "cây kim tiền là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "đặc điểm của cây kim tiền là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "đặc điểm cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "trồng cây kim tiền trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "hỏi về cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "thông tin cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "chăm sóc cây kim tiền như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cách chăm cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "tưới cây kim tiền như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "bón phân cho cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "cây kim tiền có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "thay chậu cây kim tiền",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim tiền"
+        }
+    },
+    {
+        "text": "giá cây lưỡi hổ bao nhiêu",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây phú quý"
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "shop có bán cây lưỡi hổ không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây lưỡi hổ",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cho xem cây lưỡi hổ với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "tìm cây lưỡi hổ",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "đặc điểm của cây lưỡi hổ là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "đặc điểm cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "trồng cây lưỡi hổ trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "hỏi về cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "thông tin cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "chăm sóc cây lưỡi hổ như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cách chăm cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "tưới cây lưỡi hổ như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "bón phân cho cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "thay chậu cây lưỡi hổ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "giá cây kim ngân bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "shop có bán cây kim ngân không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây kim ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cho xem cây kim ngân với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "tìm cây kim ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "đặc điểm của cây kim ngân là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "đặc điểm cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "trồng cây kim ngân trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "hỏi về cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "thông tin cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "chăm sóc cây kim ngân như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cách chăm cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "tưới cây kim ngân như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "bón phân cho cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim ngân có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "thay chậu cây kim ngân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây kim ngân"
+        }
+    },
+    {
+        "text": "giá cây thường xuân bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "shop có bán cây thường xuân không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây thường xuân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cho xem cây thường xuân với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "tìm cây thường xuân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "đặc điểm của cây thường xuân là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "đặc điểm cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "trồng cây thường xuân trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "hỏi về cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "thông tin cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "chăm sóc cây thường xuân như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cách chăm cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "tưới cây thường xuân như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "bón phân cho cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây thường xuân có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "thay chậu cây thường xuân",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thường xuân"
+        }
+    },
+    {
+        "text": "giá cây thiết mộc lan bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "shop có bán cây thiết mộc lan không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây thiết mộc lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cho xem cây thiết mộc lan với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "tìm cây thiết mộc lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "đặc điểm của cây thiết mộc lan là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "đặc điểm cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "trồng cây thiết mộc lan trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "hỏi về cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "thông tin cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "chăm sóc cây thiết mộc lan như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cách chăm cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "tưới cây thiết mộc lan như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "bón phân cho cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "thay chậu cây thiết mộc lan",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "giá cây vạn niên thanh bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "shop có bán cây vạn niên thanh không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây vạn niên thanh",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cho xem cây vạn niên thanh với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "tìm cây vạn niên thanh",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "đặc điểm của cây vạn niên thanh là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "đặc điểm cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "trồng cây vạn niên thanh trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "hỏi về cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "thông tin cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "chăm sóc cây vạn niên thanh như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cách chăm cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "tưới cây vạn niên thanh như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "bón phân cho cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "thay chậu cây vạn niên thanh",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "giá cây trầu bà bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "shop có bán cây trầu bà không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây trầu bà",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cho xem cây trầu bà với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "tìm cây trầu bà",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "đặc điểm của cây trầu bà là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "đặc điểm cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "trồng cây trầu bà trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "hỏi về cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "thông tin cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "chăm sóc cây trầu bà như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cách chăm cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "tưới cây trầu bà như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "bón phân cho cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây trầu bà có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
+        }
+    },
+    {
+        "text": "thay chậu cây trầu bà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây trầu bà"
         }
     },
     {
         "text": "giá cây phú quý bao nhiêu",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "shop có bán cây phú quý không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây phú quý còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây phú quý",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây phú quý có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây phú quý giá bao nhiêu tiền",
         "intent": "ask_specific_plant",
         "entities": {
             "plant_name": "cây phú quý"
@@ -159,20 +1937,6 @@
         }
     },
     {
-        "text": "hỏi về cây phú quý",
-        "intent": "ask_specific_plant",
-        "entities": {
-            "plant_name": "cây phú quý"
-        }
-    },
-    {
-        "text": "cây phú quý còn hàng không shop",
-        "intent": "ask_specific_plant",
-        "entities": {
-            "plant_name": "cây phú quý"
-        }
-    },
-    {
         "text": "cây phú quý",
         "intent": "ask_specific_plant",
         "entities": {
@@ -180,451 +1944,2517 @@
         }
     },
     {
-        "text": "mình muốn mua cây quất",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý là cây gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "có bán cây quất không",
-        "intent": "ask_specific_plant",
+        "text": "đặc điểm của cây phú quý là gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "giá cây quất bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "đặc điểm cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cho xem cây quất với",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "tìm cây quất",
-        "intent": "ask_specific_plant",
+        "text": "ý nghĩa phong thủy cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "hỏi về cây quất",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có dễ trồng không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cây quất còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cây quất",
-        "intent": "ask_specific_plant",
+        "text": "trồng cây phú quý trong nhà",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây quất"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "mình muốn mua cây tùng thơm",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có độc không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "có bán cây tùng thơm không",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có tác dụng gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "giá cây tùng thơm bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "hỏi về cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cho xem cây tùng thơm với",
-        "intent": "ask_specific_plant",
+        "text": "thông tin cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "tìm cây tùng thơm",
-        "intent": "ask_specific_plant",
+        "text": "cách chăm sóc cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "hỏi về cây tùng thơm",
-        "intent": "ask_specific_plant",
+        "text": "chăm sóc cây phú quý như thế nào",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cây tùng thơm còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "cách chăm cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cây tùng thơm",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây tùng thơm"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "mình muốn mua cây ngọc ngân",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý tưới nước sao",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "có bán cây ngọc ngân không",
-        "intent": "ask_specific_plant",
+        "text": "tưới cây phú quý như nào",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "giá cây ngọc ngân bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cho xem cây ngọc ngân với",
-        "intent": "ask_specific_plant",
+        "text": "ánh sáng cho cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "tìm cây ngọc ngân",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý cần nắng không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "hỏi về cây ngọc ngân",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có cần bón phân không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cây ngọc ngân còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "bón phân cho cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cây ngọc ngân",
-        "intent": "ask_specific_plant",
+        "text": "nhiệt độ thích hợp cho cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây ngọc ngân"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "mình muốn mua cây trầu bà đế vương",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "có bán cây trầu bà đế vương không",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "giá cây trầu bà đế vương bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "cây phú quý có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "cho xem cây trầu bà đế vương với",
-        "intent": "ask_specific_plant",
+        "text": "thay chậu cây phú quý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây phú quý"
         }
     },
     {
-        "text": "tìm cây trầu bà đế vương",
+        "text": "giá cây lan ý bao nhiêu",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "hỏi về cây trầu bà đế vương",
+        "text": "shop có bán cây lan ý không",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây trầu bà đế vương còn hàng không shop",
+        "text": "cây lan ý còn hàng không",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây trầu bà đế vương",
+        "text": "tôi muốn mua cây lan ý",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây trầu bà đế vương"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "mình muốn mua cây hoa lan",
+        "text": "cây lan ý có size nào",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "có bán cây hoa lan không",
+        "text": "cây lan ý giá bao nhiêu tiền",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "giá cây hoa lan bao nhiêu",
+        "text": "cho xem cây lan ý với",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cho xem cây hoa lan với",
+        "text": "tìm cây lan ý",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "tìm cây hoa lan",
+        "text": "cây lan ý",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "hỏi về cây hoa lan",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý là cây gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây hoa lan còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "đặc điểm của cây lan ý là gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây hoa lan",
-        "intent": "ask_specific_plant",
+        "text": "đặc điểm cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hoa lan"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "mình muốn mua cây hạnh phúc",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "có bán cây hạnh phúc không",
-        "intent": "ask_specific_plant",
+        "text": "ý nghĩa phong thủy cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "giá cây hạnh phúc bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý có dễ trồng không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cho xem cây hạnh phúc với",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "tìm cây hạnh phúc",
-        "intent": "ask_specific_plant",
+        "text": "trồng cây lan ý trong nhà",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "hỏi về cây hạnh phúc",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý có độc không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây hạnh phúc còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý có tác dụng gì",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây hạnh phúc",
-        "intent": "ask_specific_plant",
+        "text": "hỏi về cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hạnh phúc"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "mình muốn mua cây hồng môn",
-        "intent": "ask_specific_plant",
+        "text": "thông tin cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "có bán cây hồng môn không",
-        "intent": "ask_specific_plant",
+        "text": "cách chăm sóc cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "giá cây hồng môn bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "chăm sóc cây lan ý như thế nào",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cho xem cây hồng môn với",
-        "intent": "ask_specific_plant",
+        "text": "cách chăm cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "tìm cây hồng môn",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "hỏi về cây hồng môn",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý tưới nước sao",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây hồng môn còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "tưới cây lan ý như nào",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây hồng môn",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây hồng môn"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "mình muốn mua cây mai vàng",
-        "intent": "ask_specific_plant",
+        "text": "ánh sáng cho cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "có bán cây mai vàng không",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý cần nắng không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "giá cây mai vàng bao nhiêu",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý có cần bón phân không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cho xem cây mai vàng với",
-        "intent": "ask_specific_plant",
+        "text": "bón phân cho cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "tìm cây mai vàng",
-        "intent": "ask_specific_plant",
+        "text": "nhiệt độ thích hợp cho cây lan ý",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "hỏi về cây mai vàng",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây mai vàng còn hàng không shop",
-        "intent": "ask_specific_plant",
+        "text": "cây lan ý trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây lan ý"
         }
     },
     {
-        "text": "cây mai vàng",
+        "text": "cây lan ý có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lan ý"
+        }
+    },
+    {
+        "text": "thay chậu cây lan ý",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây lan ý"
+        }
+    },
+    {
+        "text": "giá cây sung bao nhiêu",
         "intent": "ask_specific_plant",
         "entities": {
-            "plant_name": "cây mai vàng"
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "shop có bán cây sung không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung còn hàng không",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "tôi muốn mua cây sung",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có size nào",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung giá bao nhiêu tiền",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cho xem cây sung với",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "tìm cây sung",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung",
+        "intent": "ask_specific_plant",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung là cây gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "đặc điểm của cây sung là gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "đặc điểm cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có ý nghĩa phong thủy gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "ý nghĩa phong thủy cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có dễ trồng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có phù hợp trồng trong nhà không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "trồng cây sung trong nhà",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có độc không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có tác dụng gì",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "hỏi về cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "thông tin cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cách chăm sóc cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "chăm sóc cây sung như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cách chăm cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung cần tưới nước bao nhiêu lần",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung tưới nước sao",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "tưới cây sung như nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung cần ánh sáng như thế nào",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "ánh sáng cho cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung cần nắng không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có cần bón phân không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "bón phân cho cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "nhiệt độ thích hợp cho cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung chịu nhiệt độ",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung trồng trong nhà được không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây sung có cần thay chậu không",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "thay chậu cây sung",
+        "intent": "ask_plant_characteristics",
+        "entities": {
+            "plant_name": "cây sung"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây lưỡi hổ khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây lưỡi hổ",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây lưỡi hổ",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây lưỡi hổ",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây lưỡi hổ nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lưỡi hổ"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây kim ngân khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây kim ngân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây kim ngân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây kim ngân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây kim ngân nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây thường xuân khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây thường xuân nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây thiết mộc lan khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây thiết mộc lan nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây vạn niên thanh khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây vạn niên thanh nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây trầu bà khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây trầu bà nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây kim tiền và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây kim tiền hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim tiền hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây kim tiền và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây kim tiền với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim tiền",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây kim ngân khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây kim ngân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây kim ngân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây kim ngân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây kim ngân nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây kim ngân"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây thường xuân khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây thường xuân nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây thiết mộc lan khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây thiết mộc lan nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây vạn niên thanh khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây vạn niên thanh nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây trầu bà khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây trầu bà nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây lưỡi hổ hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lưỡi hổ hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây lưỡi hổ và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây lưỡi hổ với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lưỡi hổ",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây thường xuân khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây thường xuân",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây thường xuân nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thường xuân"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây thiết mộc lan khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây thiết mộc lan nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây vạn niên thanh khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây vạn niên thanh nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây trầu bà khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây trầu bà nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây kim ngân và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây kim ngân hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây kim ngân hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây kim ngân và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây kim ngân với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây kim ngân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây thường xuân và cây thiết mộc lan khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "nên trồng cây thường xuân hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thường xuân hay cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "so sánh cây thường xuân và cây thiết mộc lan",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thường xuân với cây thiết mộc lan nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây thiết mộc lan"
+        }
+    },
+    {
+        "text": "cây thường xuân và cây vạn niên thanh khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "nên trồng cây thường xuân hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thường xuân hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "so sánh cây thường xuân và cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây thường xuân với cây vạn niên thanh nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây thường xuân và cây trầu bà khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nên trồng cây thường xuân hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thường xuân hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "so sánh cây thường xuân và cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây thường xuân với cây trầu bà nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây thường xuân và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây thường xuân hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thường xuân hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây thường xuân và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây thường xuân với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây thường xuân và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây thường xuân hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thường xuân hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây thường xuân và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây thường xuân với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây thường xuân và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây thường xuân hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thường xuân hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây thường xuân và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây thường xuân với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thường xuân",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan và cây vạn niên thanh khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "nên trồng cây thiết mộc lan hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thiết mộc lan hay cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "so sánh cây thiết mộc lan và cây vạn niên thanh",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan với cây vạn niên thanh nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây vạn niên thanh"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan và cây trầu bà khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nên trồng cây thiết mộc lan hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thiết mộc lan hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "so sánh cây thiết mộc lan và cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan với cây trầu bà nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây thiết mộc lan hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thiết mộc lan hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây thiết mộc lan và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây thiết mộc lan hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thiết mộc lan hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây thiết mộc lan và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây thiết mộc lan hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây thiết mộc lan hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây thiết mộc lan và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây thiết mộc lan với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây thiết mộc lan",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh và cây trầu bà khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "nên trồng cây vạn niên thanh hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây vạn niên thanh hay cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "so sánh cây vạn niên thanh và cây trầu bà",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh với cây trầu bà nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây trầu bà"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây vạn niên thanh hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây vạn niên thanh hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây vạn niên thanh và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây vạn niên thanh hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây vạn niên thanh hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây vạn niên thanh và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây vạn niên thanh hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây vạn niên thanh hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây vạn niên thanh và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây vạn niên thanh với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây vạn niên thanh",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây trầu bà và cây phú quý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "nên trồng cây trầu bà hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây trầu bà hay cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "so sánh cây trầu bà và cây phú quý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây trầu bà với cây phú quý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây phú quý"
+        }
+    },
+    {
+        "text": "cây trầu bà và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây trầu bà hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây trầu bà hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây trầu bà và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây trầu bà với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây trầu bà và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây trầu bà hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây trầu bà hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây trầu bà và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây trầu bà với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây trầu bà",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây phú quý và cây lan ý khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "nên trồng cây phú quý hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây phú quý hay cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "so sánh cây phú quý và cây lan ý",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây phú quý với cây lan ý nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây lan ý"
+        }
+    },
+    {
+        "text": "cây phú quý và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây phú quý hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây phú quý hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây phú quý và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây phú quý với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây phú quý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây lan ý và cây sung khác nhau như thế nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lan ý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "nên trồng cây lan ý hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lan ý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây nào dễ chăm hơn: cây lan ý hay cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lan ý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "so sánh cây lan ý và cây sung",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lan ý",
+            "plant_2": "cây sung"
+        }
+    },
+    {
+        "text": "cây lan ý với cây sung nên mua cây nào",
+        "intent": "compare_plants",
+        "entities": {
+            "plant_1": "cây lan ý",
+            "plant_2": "cây sung"
         }
     },
     {
@@ -632,76 +4462,6 @@
         "intent": "find_by_location",
         "entities": {
             "location_type": "indoor"
-        }
-    },
-    {
-        "text": "cây trồng trong phòng",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "indoor"
-        }
-    },
-    {
-        "text": "cây nội thất",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "indoor"
-        }
-    },
-    {
-        "text": "cây để bàn làm việc",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "indoor"
-        }
-    },
-    {
-        "text": "cây văn phòng",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "indoor"
-        }
-    },
-    {
-        "text": "cây trồng ngoài trời",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "outdoor"
-        }
-    },
-    {
-        "text": "cây sân vườn",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "outdoor"
-        }
-    },
-    {
-        "text": "cây ban công",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "outdoor"
-        }
-    },
-    {
-        "text": "cây trồng trước hiên",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "outdoor"
-        }
-    },
-    {
-        "text": "cây nào cũng được",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "both"
-        }
-    },
-    {
-        "text": "trồng đâu cũng sống",
-        "intent": "find_by_location",
-        "entities": {
-            "location_type": "both"
         }
     },
     {
@@ -713,6 +4473,13 @@
     },
     {
         "text": "cho mình xem cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây trồng trong phòng",
         "intent": "find_by_location",
         "entities": {
             "location_type": "indoor"
@@ -733,6 +4500,13 @@
         }
     },
     {
+        "text": "cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
         "text": "tư vấn cây nội thất",
         "intent": "find_by_location",
         "entities": {
@@ -741,6 +4515,13 @@
     },
     {
         "text": "cho mình xem cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây để bàn làm việc",
         "intent": "find_by_location",
         "entities": {
             "location_type": "indoor"
@@ -761,6 +4542,13 @@
         }
     },
     {
+        "text": "cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
         "text": "tư vấn cây văn phòng",
         "intent": "find_by_location",
         "entities": {
@@ -775,6 +4563,13 @@
         }
     },
     {
+        "text": "cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
         "text": "tư vấn cây trồng ngoài trời",
         "intent": "find_by_location",
         "entities": {
@@ -783,6 +4578,13 @@
     },
     {
         "text": "cho mình xem cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây sân vườn",
         "intent": "find_by_location",
         "entities": {
             "location_type": "outdoor"
@@ -803,6 +4605,13 @@
         }
     },
     {
+        "text": "cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
         "text": "tư vấn cây ban công",
         "intent": "find_by_location",
         "entities": {
@@ -811,6 +4620,13 @@
     },
     {
         "text": "cho mình xem cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây trồng trước hiên",
         "intent": "find_by_location",
         "entities": {
             "location_type": "outdoor"
@@ -831,6 +4647,13 @@
         }
     },
     {
+        "text": "cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
         "text": "tư vấn cây nào cũng được",
         "intent": "find_by_location",
         "entities": {
@@ -839,6 +4662,13 @@
     },
     {
         "text": "cho mình xem cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "trồng đâu cũng sống",
         "intent": "find_by_location",
         "entities": {
             "location_type": "both"

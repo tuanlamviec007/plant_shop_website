@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block title %}{{ product.name }} - Plant Shop{% endblock %}
 
@@ -16,9 +17,14 @@
         <!-- Product Image -->
         <div class="col-md-6 mb-4">
             <div class="card border-0 shadow-sm">
+                {% if product.image %}
                 <img src="{{ product.image.url }}" class="card-img-top rounded" alt="{{ product.name }}"
                     style="max-height: 500px; object-fit: cover;"
                     onerror="this.src='https://placehold.co/500x500?text={{ product.name|urlencode }}'">
+                {% else %}
+                <img src="https://placehold.co/500x500?text={{ product.name|urlencode }}" class="card-img-top rounded" alt="{{ product.name }}"
+                    style="max-height: 500px; object-fit: cover;">
+                {% endif %}
             </div>
         </div>
 
@@ -40,10 +46,10 @@
             <div class="mb-4">
                 {% if product.original_price %}
                 <span class="text-muted text-decoration-line-through fs-5 me-2">
-                    {{ product.original_price|floatformat:0 }}đ
+                    {{ product.original_price|intcomma }}đ
                 </span>
                 {% endif %}
-                <span class="text-success fw-bold display-6">{{ product.price|floatformat:0 }}đ</span>
+                <span class="text-success fw-bold display-6">{{ product.price|intcomma }}đ</span>
             </div>
 
             <p class="lead mb-4">{{ product.description }}</p>
@@ -107,13 +113,18 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="card product-card h-100">
                                 <a href="{% url 'product_detail' rel_product.slug %}">
+                                    {% if rel_product.image %}
                                     <img src="{{ rel_product.image.url }}" class="card-img-top"
                                         alt="{{ rel_product.name }}" style="height: 200px; object-fit: cover;"
                                         onerror="this.src='https://placehold.co/300x200?text={{ rel_product.name|urlencode }}'">
+                                    {% else %}
+                                    <img src="https://placehold.co/300x200?text={{ rel_product.name|urlencode }}" class="card-img-top"
+                                        alt="{{ rel_product.name }}" style="height: 200px; object-fit: cover;">
+                                    {% endif %}
                                 </a>
                                 <div class="card-body">
                                     <h6 class="card-title fw-bold">{{ rel_product.name }}</h6>
-                                    <p class="text-success fw-bold">{{ rel_product.price|floatformat:0 }}đ</p>
+                                    <p class="text-success fw-bold">{{ rel_product.price|intcomma }}đ</p>
                                     <a href="{% url 'product_detail' rel_product.slug %}"
                                         class="btn btn-outline-success btn-sm w-100">Xem chi tiết</a>
                                 </div>
