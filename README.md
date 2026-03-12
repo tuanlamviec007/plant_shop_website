@@ -92,9 +92,9 @@ python manage.py runserver
 Truy cập: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ## 👥 Thành Viên Nhóm 5
-1. **Nguyễn Đắc Tuấn** - Fullstack Developer
-2. **Đàm Trường Vũ** - Frontend Developer
-3. **Nguyễn Thị Mai Anh** - AI Engineer
+1. **Nguyễn Đắc Tuấn** - Developer
+2. **Đàm Trường Vũ** - Developer
+3. **Nguyễn Thị Mai Anh** - Báo cáo 
 
 ---
 *Dự án phục vụ mục đích học tập.*
