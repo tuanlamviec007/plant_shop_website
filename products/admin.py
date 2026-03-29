@@ -22,6 +22,8 @@ class ProductAdmin(admin.ModelAdmin):
     list_editable = ['price', 'stock', 'is_featured', 'is_active']
     readonly_fields = ['sold_count', 'rating_avg', 'rating_count', 'created_at', 'updated_at']
 
+    list_per_page = 20
+    
     fieldsets = (
         ('Thông tin cơ bản', {
             'fields': ('category', 'name', 'slug', 'description', 'image')
@@ -40,22 +42,3 @@ class ProductAdmin(admin.ModelAdmin):
         }),
     )
 
-
-
-    fieldsets = (
-        ('Thông tin cơ bản', {
-            'fields': ('category', 'name', 'slug', 'description', 'image')
-        }),
-        ('Giá & Kho', {
-            'fields': ('price', 'original_price', 'stock', 'sold_count')
-        }),
-        ('Chăm sóc', {
-            'fields': ('care_level', 'light_requirement', 'water_frequency')
-        }),
-        ('Đánh giá', {
-            'fields': ('rating_avg', 'rating_count')
-        }),
-        ('Trạng thái', {
-            'fields': ('is_featured', 'is_active', 'created_at', 'updated_at')
-        }),
-    )

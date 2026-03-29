@@ -15,9 +15,9 @@ from products.models import Product
 
 def generate_training_data():
     plants_req = [
-        'Cây kim tiền', 'Cây lưỡi hổ', 'Cây kim ngân', 'Cây thường xuân', 
-        'Cây thiết mộc lan', 'Cây vạn niên thanh', 'Cây trầu bà', 
-        'Cây phú quý', 'Cây lan ý', 'Cây sung'
+        'Cây Kim Tiền', 'Cây Lưỡi Hổ', 'Cây Kim Ngân', 'Cây Thường Xuân', 
+        'Cây Thiết Mộc Lan', 'Cây Vạn Niên Thanh', 'Cây Trầu Bà', 
+        'Cây Phú Quý', 'Cây Lan Ý', 'Cây Sung'
     ]
     
     # Lấy chính xác 10 cây
@@ -151,25 +151,63 @@ def generate_training_data():
 
     # Intent: find_by_location
     location_phrases = {
-        "indoor": ["cây để trong nhà", "cây trồng trong phòng", "cây nội thất", "cây để bàn làm việc", "cây văn phòng"],
-        "outdoor": ["cây trồng ngoài trời", "cây sân vườn", "cây ban công", "cây trồng trước hiên"],
-        "both": ["cây nào cũng được", "trồng đâu cũng sống"]
+        "indoor": [
+            "cây để trong nhà", "cây trồng trong phòng", "cây nội thất",
+            "cây để bàn làm việc", "cây văn phòng", "cây để bàn",
+            "cây trong nhà", "cây phòng khách", "cây phòng ngủ",
+            "cây trồng trong nhà", "cây chịu bóng"
+        ],
+        "outdoor": [
+            "cây trồng ngoài trời", "cây sân vườn", "cây ban công",
+            "cây trồng trước hiên", "cây ngoài trời", "cây trước cổng",
+            "cây trồng ngoài", "cây cho vườn"
+        ],
+        "both": ["cây nào cũng được", "trồng đâu cũng sống", "cây trồng được trong và ngoài"]
     }
+    location_prefixes = [
+        "", "tư vấn ", "cho mình xem ", "tìm giúp mình ",
+        "gợi ý ", "tìm cho tôi ", "tìm cho tôi 5 ",
+        "tìm cho tôi 4 ", "gợi ý cho tôi ", "cần mua ",
+        "mình muốn ", "mình cần ", "tìm "
+    ]
     for loc, phrases in location_phrases.items():
         for text in phrases:
-            training_data.append({"text": text, "intent": "find_by_location", "entities": {"location_type": loc}})
-            training_data.append({"text": f"tư vấn {text}", "intent": "find_by_location", "entities": {"location_type": loc}})
-            training_data.append({"text": f"cho mình xem {text}", "intent": "find_by_location", "entities": {"location_type": loc}})
+            for prefix in location_prefixes:
+                training_data.append({
+                    "text": f"{prefix}{text}".strip(),
+                    "intent": "find_by_location",
+                    "entities": {"location_type": loc}
+                })
 
     # Intent: find_by_care_level
     care_phrases = {
-        "easy": ["cây dễ chăm", "cây ít chăm sóc", "cây cho người lười", "cây sống dai", "cây dễ sống", "cây không cần chăm nhiều"],
-        "medium": ["cây chăm sóc trung bình", "cây bình thường"],
-        "hard": ["cây khó chăm", "cây cần chăm sóc kỹ", "cây đẹp mà khó chăm"]
+        "easy": [
+            "cây dễ chăm", "cây ít chăm sóc", "cây cho người lười",
+            "cây sống dai", "cây dễ sống", "cây không cần chăm nhiều",
+            "cây dễ nuôi", "cây cho người bận rộn", "cây ít tưới nước",
+            "cây dễ trồng", "cây dễ chăm sóc nhất"
+        ],
+        "medium": [
+            "cây chăm sóc trung bình", "cây bình thường",
+            "cây không quá khó không quá dễ"
+        ],
+        "hard": [
+            "cây khó chăm", "cây cần chăm sóc kỹ",
+            "cây đẹp mà khó chăm", "cây cần nhiều công chăm sóc"
+        ]
     }
+    care_prefixes = [
+        "", "tìm ", "gợi ý ", "tìm cho tôi ", "cho mình xem ",
+        "tôi cần ", "mình muốn "
+    ]
     for care, phrases in care_phrases.items():
         for text in phrases:
-            training_data.append({"text": text, "intent": "find_by_care_level", "entities": {"care_level": care}})
+            for prefix in care_prefixes:
+                training_data.append({
+                    "text": f"{prefix}{text}".strip(),
+                    "intent": "find_by_care_level",
+                    "entities": {"care_level": care}
+                })
 
     # Save to JSON
     output_path = os.path.join(script_dir, "training_data.json")

@@ -18,10 +18,9 @@ PLANTS_PATH = os.path.join(settings.BASE_DIR, 'plant_recommendation', 'selected_
 
 _config = None
 _model = None
-_plants = None
 
 def _load_resources():
-    global _config, _model, _plants
+    global _config, _model
     if _config is None:
         try:
             with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
@@ -33,13 +32,14 @@ def _load_resources():
             _model = joblib.load(MODEL_PATH)
         except Exception as e:
             print(f"❌ Model load error: {e}")
-    if _plants is None:
-        try:
-            with open(PLANTS_PATH, 'r', encoding='utf-8') as f:
-                _plants = json.load(f)
-        except Exception:
-            _plants = []
-    return _config, _model, _plants
+    # Always reload plants fresh from disk so retraining is reflected immediately
+    plants = []
+    try:
+        with open(PLANTS_PATH, 'r', encoding='utf-8-sig') as f:
+            plants = json.load(f)
+    except Exception:
+        plants = []
+    return _config, _model, plants
 
 def _normalize_text(text):
     """Normalize text: lowercase, remove some special chars but KEEP accents"""
@@ -87,17 +87,61 @@ def _extract_intents_and_filters(user_input):
                     detected_filters[field] = value
                     break 
 
-    # Look for specific plant name (if intent is ask_specific_plant or recommendation or ask_plant_characteristics)
-    if (intent in ['ask_specific_plant', 'recommendation', 'ask_plant_characteristics']) and plants:
+    # Detect category from input
+    if 'trong phòng' in norm_input or 'trong nhà' in norm_input:
+        detected_filters['category'] = 'cây để trong phòng'
+    elif 'sân vườn' in norm_input or 'ngoài trời' in norm_input or 'ban công' in norm_input:
+        detected_filters['category'] = 'cây trồng tại sân vườn'
+
+    # Detect desk suitability
+    if 'để bàn' in norm_input or 'bàn làm việc' in norm_input:
+        detected_filters['desk_suitable'] = True 
+
+    # Detect price conditions
+    price_keywords = ['giá', 'đắt', 'rẻ', 'nhỏ hơn', 'lớn hơn', 'dưới', 'trên', 'so với', 'hơn', 'ít hơn']
+    if any(kw in norm_input for kw in price_keywords):
+        detected_filters['price_condition'] = {}
+        # Extract numbers (assuming VND, remove commas)
+        numbers = re.findall(r'\d+', user_input.replace(',', ''))  # Use original user_input for numbers
+        if numbers:
+            value = int(numbers[0])
+            # Check in original user_input for operators
+            if '<' in user_input or 'nhỏ hơn' in user_input or 'dưới' in user_input or 'ít hơn' in user_input:
+                detected_filters['price_condition']['operator'] = 'lt'
+                detected_filters['price_condition']['value'] = value
+            elif '>' in user_input or 'lớn hơn' in user_input or 'trên' in user_input or 'hơn' in user_input:
+                detected_filters['price_condition']['operator'] = 'gt'
+                detected_filters['price_condition']['value'] = value
+        # Check for comparison with specific plant
         for p in plants:
-            # simple check
-            if p['name'].lower() in norm_input:
-                detected_filters['specific_plant_slug'] = p['slug']
-                # If we found a specific plant and it wasn't already characteristics, we decide
-                if intent != 'ask_plant_characteristics':
-                    intent = 'ask_specific_plant'
+            if p['name'].lower() in user_input.lower():  # Check in original
+                detected_filters['price_condition']['operator'] = 'lt_plant' if 'nhỏ hơn' in user_input or 'ít hơn' in user_input else 'gt_plant'
+                detected_filters['price_condition']['plant_slug'] = p['slug']
                 break
-                
+
+    # Look for specific plant name (if intent is ask_specific_plant or recommendation or ask_plant_characteristics)
+    if intent in ['ask_specific_plant', 'recommendation', 'ask_plant_characteristics']:
+        found_plant = None
+        for p in plants:
+            if p['name'].lower() in norm_input:
+                found_plant = p
+                if intent == 'recommendation':
+                    detected_filters['search_name'] = p['name']
+                else:
+                    detected_filters['specific_plant_slug'] = p['slug']
+                    if intent != 'ask_plant_characteristics':
+                        intent = 'ask_specific_plant'
+                break
+        # Nếu không tìm thấy tên cây trong selected_plants thì luôn báo không có mặt hàng này
+        if not found_plant:
+            # Lấy tên cây người dùng hỏi (sau các từ khóa tìm, mua, xem...)
+            import re
+            match = re.search(r"(?:tìm|tư vấn|mua|xem|giới thiệu|bán)?(?: cho tôi| giúp)?(?: cây)? ([\w\s]+)", user_input.lower())
+            if match:
+                detected_filters['not_found_plant_name'] = match.group(1).strip()
+            else:
+                detected_filters['not_found_plant_name'] = user_input.strip()
+
     if intent == 'compare_plants' and plants:
         found_plants = []
         # sort plants by name length descending to match longest first (e.g. "Cây kim ngân" vs "Cây kim tiền")
@@ -159,8 +203,34 @@ def chatbot_response(request_message, context=None):
     request_message: str (User's text input)
     context: dict (History/session context - optional)
     """
-    config, _, _ = _load_resources()
+    config, _, plants = _load_resources()
     intent, filters = _extract_intents_and_filters(request_message)
+    
+    # Nếu phát hiện hỏi về cây không có trong danh sách train thì trả về luôn thông báo không có mặt hàng này
+    not_found_plant_name = filters.pop('not_found_plant_name', None)
+    if not_found_plant_name:
+        return {
+            'message': f"Xin lỗi, hiện tại cửa hàng mình không có mặt hàng '{not_found_plant_name.strip()}'. Bạn thử tham khảo các dòng cây tiểu cảnh khác nhé!",
+            'data': []
+        }
+
+    # Override intent if price condition is detected (treat as recommendation)
+    if 'price_condition' in filters:
+        intent = 'recommendation'
+
+    # If desk_suitable is set, remove location_type filter since desk plants are indoor
+    if 'desk_suitable' in filters:
+        filters.pop('location_type', None)
+
+    # Filter plants by category if specified
+    category = filters.pop('category', None)
+    if category:
+        plants = [p for p in plants if p.get('category') == category]
+
+    # Filter by desk suitability
+    desk_suitable = filters.pop('desk_suitable', None)
+    if desk_suitable is not None:
+        plants = [p for p in plants if p.get('desk_suitable', True) == desk_suitable]
     
     # Logic Processing
     if intent == 'greeting' and not filters:
@@ -175,39 +245,107 @@ def chatbot_response(request_message, context=None):
     p1_slug = filters.pop('plant_1_slug', None)
     p2_slug = filters.pop('plant_2_slug', None)
     
-    # Query Database
-    products = Product.objects.filter(is_active=True)
+    # If price condition is set for recommendation, don't filter by specific plant
+    if 'price_condition' in filters and intent == 'recommendation':
+        plant_slug = None
     
-    if plant_slug:
+    # Get the 10 selected plant IDs to restrict all queries to the curated list
+    selected_ids = [p['id'] for p in plants] if plants else []
+    
+    # Query Database - always restrict to the selected plants
+    products = Product.objects.filter(is_active=True)
+    products = products.filter(id__in=selected_ids)
+    
+    # Apply price condition if detected
+    price_condition = filters.pop('price_condition', None)
+    if price_condition:
+        if 'value' in price_condition:
+            if price_condition['operator'] == 'lt':
+                products = products.filter(price__lt=price_condition['value'])
+            elif price_condition['operator'] == 'gt':
+                products = products.filter(price__gt=price_condition['value'])
+        elif 'plant_slug' in price_condition:
+            try:
+                ref_plant = Product.objects.get(slug=price_condition['plant_slug'], is_active=True)
+                if price_condition['operator'] == 'lt_plant':
+                    products = products.filter(price__lt=ref_plant.price)
+                elif price_condition['operator'] == 'gt_plant':
+                    products = products.filter(price__gt=ref_plant.price)
+            except Product.DoesNotExist:
+                pass  # ignore if plant not found
+    
+    if plant_slug and not ('price_condition' in filters and intent == 'recommendation'):
         products = products.filter(slug=plant_slug)
     
-    # Apply detected filters for normal recommendations
-    if filters and intent != 'ask_plant_characteristics':
+    # Tìm kiếm theo tên (khi intent là recommendation hoặc bất kỳ intent nào nhưng có tên cây cụ thể)
+    search_name = filters.pop('search_name', None)
+    if search_name:
+        products = products.filter(name__icontains=search_name.replace('cây ', '').replace('Cây ', '').strip())
+        if not products.exists():
+            return {
+                'message': f"Xin lỗi, hiện tại cửa hàng mình không tìm thấy loại cây '{search_name}' trong bộ sưu tập. Bạn thử tham khảo các dòng cây tiểu cảnh khác nhé!",
+                'data': []
+            }
+    
+    # Apply detected filters
+    if filters:
         query_q = Q()
         for field, value in filters.items():
-            query_q &= Q(**{field: value})
-        
-        products = products.filter(query_q)
-        
-    # Explain what we understood
-    understanding = []
-    if 'location_type' in filters:
-        understanding.append(f"vị trí {filters['location_type']}")
-    if 'care_level' in filters:
-        understanding.append(f"chăm sóc {_translate_care(filters['care_level'])}")
+            if field == 'location_type':
+                if value == 'outdoor':
+                    query_q &= Q(location_type__in=['outdoor', 'both'])
+                elif value == 'indoor':
+                    query_q &= Q(location_type__in=['indoor', 'both'])
+                else:
+                    query_q &= Q(location_type=value)
+            elif field in ['care_level', 'space_required', 'light_condition']:
+                query_q &= Q(**{field: value})
+        filtered_products = products.filter(query_q)
+        if filtered_products.exists():
+            products = filtered_products
+        # else: keep 'products' as the full curated list if no match found
     
+    # Special case for Feng Shui general query
+    if intent == 'ask_plant_characteristics' and char_type == 'feng_shui' and not plant_slug:
+        # User asked "cây phong thủy nào tốt", find all plants with feng_shui_meaning
+        feng_shui_products = products.exclude(feng_shui_meaning__isnull=True).exclude(feng_shui_meaning__exact='')
+        if feng_shui_products.exists():
+            products = feng_shui_products
+        
     # If it was an "ask_specific_plant" intent but we didn't extract any known plant,
-    if intent in ['ask_specific_plant', 'ask_plant_characteristics'] and not plant_slug:
+    if intent in ['ask_specific_plant', 'ask_plant_characteristics'] and not plant_slug and not filters:
          return {
             'message': "Xin lỗi, hiện tại cửa hàng mình chỉ hỗ trợ tư vấn và bán các dòng cây có trong bộ sưu tập chọn lọc. Bạn thử tham khảo các dòng cây tiểu cảnh khác nhé!",
             'data': []
         }
+
         
     # Handle ask_plant_characteristics
     if intent == 'ask_plant_characteristics':
+        # Ưu tiên lấy thông tin từ selected_plants.json nếu có
+        plant_info = next((p for p in plants if p['slug'] == plant_slug), None)
+        if plant_info:
+            ans = ""
+            # Ưu tiên trả về cách chăm sóc nếu người dùng hỏi về chăm sóc
+            if any(kw in request_message.lower() for kw in ['chăm sóc', 'cách chăm', 'cach cham', 'hướng dẫn chăm', 'huong dan cham']):
+                ans += f"Cách chăm sóc {plant_info['name']}: {plant_info.get('care', 'Chưa có thông tin chăm sóc.')}\n"
+            if any(kw in request_message.lower() for kw in ['đặc điểm', 'dac diem', 'đặc tính', 'dac tinh']):
+                ans += f"Đặc điểm của {plant_info['name']}: {plant_info.get('characteristics', 'Chưa có thông tin đặc điểm.')}\n"
+            if any(kw in request_message.lower() for kw in ['ý nghĩa', 'y nghia', 'phong thủy', 'phong thuy']):
+                ans += f"Ý nghĩa của {plant_info['name']}: {plant_info.get('meaning', 'Chưa có thông tin ý nghĩa.')}\n"
+            if not ans:
+                # fallback nếu không hỏi rõ đặc điểm, ý nghĩa hay chăm sóc
+                ans = f"{plant_info['name']} là một loại cây rất tuyệt vời! Đặc điểm: {plant_info.get('characteristics', '')} Ý nghĩa: {plant_info.get('meaning', '')} Cách chăm sóc: {plant_info.get('care', '')}"
+            filters['characteristic_type'] = char_type
+            filters['specific_plant_slug'] = plant_slug
+            return {
+                'message': ans.strip(),
+                'data': [],
+                'filters_detected': filters
+            }
+        # Nếu không có trong selected_plants.json thì fallback về Product
         try:
             plant = Product.objects.get(slug=plant_slug, is_active=True)
-            
             if char_type == 'water':
                 ans = f"Đối với {plant.name}, chế độ tưới nước là: {plant.water_frequency}."
                 if plant.care_tips: ans += f" Lưu ý thêm: {plant.care_tips}"
@@ -231,12 +369,9 @@ def chatbot_response(request_message, context=None):
             elif char_type == 'repotting':
                 ans = f"Bạn nên thay chậu cho {plant.name} mỗi 1-2 năm hoặc khi thấy rễ cây phát triển chật kín chậu."
             else:
-                ans = f"{plant.name} là một loại cây rất tuyệt vời! Đặc điểm: {plant.description[:200]}..."
-                
-            # Add back char_type to filters for response context
+                ans = f"{plant.name} Đặc điểm: {plant.description[:200]}..."
             filters['characteristic_type'] = char_type
             filters['specific_plant_slug'] = plant_slug
-            
             return {
                 'message': ans,
                 'data': [],
@@ -285,14 +420,14 @@ def chatbot_response(request_message, context=None):
              }
         
     # Get results
-    results = products.order_by('-is_featured', 'price')[:5] # Top 5
-    
-    if not results.exists():
-         return {
-            'message': config['responses']['no_result'],
+    results = products.order_by('price')[:5] # Top 5
+
+    if len(results) == 0:
+        return {
+            'message': "Xin lỗi, hiện tại cửa hàng mình không tìm thấy loại cây bạn yêu cầu trong bộ sưu tập. Bạn thử tham khảo các dòng cây tiểu cảnh khác nhé!",
             'data': []
         }
-    
+
     # Format response
     response_products = []
     for p in results:
@@ -304,11 +439,11 @@ def chatbot_response(request_message, context=None):
             'image_url': p.image.url if p.image else '',
             'url': f"/products/{p.slug}/" # Simple URL construction or use get_absolute_url if model method available in context
         })
-        
+
     msg = f"Mình tìm thấy {len(results)} cây phù hợp với bạn:"
     if filters:
         msg = f"Theo yêu cầu của bạn, mình gợi ý:"
-        
+
     return {
         'message': msg,
         'data': response_products,

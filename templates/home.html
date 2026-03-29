@@ -3,95 +3,664 @@
 
 {% block title %}Trang chủ - Plant Shop{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* ===== KEYFRAME ANIMATIONS ===== */
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-50px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(50px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33%       { transform: translateY(-18px) rotate(5deg); }
+        66%       { transform: translateY(-8px) rotate(-3deg); }
+    }
+    @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50%       { transform: translateY(-25px) rotate(8deg); }
+    }
+    @keyframes pulse-ring {
+        0%   { transform: scale(0.85); opacity: 0.7; }
+        50%  { transform: scale(1.05); opacity: 0.3; }
+        100% { transform: scale(0.85); opacity: 0.7; }
+    }
+    @keyframes shimmer {
+        0%   { background-position: -200% center; }
+        100% { background-position: 200% center; }
+    }
+    @keyframes leafSpin {
+        from { transform: rotate(0deg) scale(1); }
+        to   { transform: rotate(360deg) scale(1.1); }
+    }
+    @keyframes countUp {
+        from { opacity: 0; transform: scale(0.5); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInBadge {
+        from { opacity: 0; transform: translateX(30px) scale(0.8); }
+        to   { opacity: 1; transform: translateX(0) scale(1); }
+    }
+    @keyframes waveFloat {
+        0%  { transform: translateY(0) translateX(0); opacity: 0.6; }
+        50% { transform: translateY(-30px) translateX(10px); opacity: 1; }
+        100%{ transform: translateY(0) translateX(0); opacity: 0.6; }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+        background: linear-gradient(135deg, #f0fff4 0%, #e8f5e9 40%, #f1f8e9 100%);
+        border-radius: 28px;
+        padding: 4rem 3rem;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 4rem;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: -80px; right: -80px;
+        width: 350px; height: 350px;
+        background: radial-gradient(circle, rgba(40,167,69,0.12), transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        bottom: -60px; left: -60px;
+        width: 280px; height: 280px;
+        background: radial-gradient(circle, rgba(32,201,151,0.1), transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .hero-text { animation: fadeInLeft 0.9s ease both; }
+    .hero-image-wrap { animation: fadeInRight 0.9s ease 0.2s both; }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        color: #1a2e1a;
+    }
+    .hero-title .highlight {
+        background: linear-gradient(135deg, #28a745, #20c997, #00bcd4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-size: 200% auto;
+        animation: shimmer 3s linear infinite;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    .hero-buttons { animation: fadeInUp 0.8s ease 0.6s both; }
+
+    .btn-hero-primary {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 0.85rem 2.2rem;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 6px 20px rgba(40,167,69,0.4);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .btn-hero-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(40,167,69,0.5);
+        color: white;
+    }
+    .btn-hero-secondary {
+        background: transparent;
+        color: #28a745;
+        border: 2px solid #28a745;
+        border-radius: 50px;
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .btn-hero-secondary:hover {
+        background: #28a745;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(40,167,69,0.3);
+    }
+
+    /* Floating leaf decorations */
+    .leaf-deco {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.15;
+        pointer-events: none;
+        user-select: none;
+    }
+    .leaf-deco.l1 { top: 10%; left: 5%;  animation: waveFloat 6s ease-in-out infinite; }
+    .leaf-deco.l2 { top: 70%; left: 2%;  animation: waveFloat 8s ease-in-out infinite 1s; font-size: 1.4rem; }
+    .leaf-deco.l3 { top: 20%; right: 5%; animation: waveFloat 7s ease-in-out infinite 0.5s; }
+    .leaf-deco.l4 { bottom: 15%; right: 3%; animation: waveFloat 9s ease-in-out infinite 2s; font-size: 1.6rem; }
+
+    /* Hero image */
+    .hero-img {
+        border-radius: 24px;
+        object-fit: cover;
+        width: 100%;
+        max-height: 420px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+        transition: transform 0.5s ease;
+        animation: float 6s ease-in-out infinite;
+    }
+    .hero-img:hover { animation-play-state: paused; transform: scale(1.02); }
+
+    /* Badge floating over image */
+    .hero-badge {
+        position: absolute;
+        bottom: 30px;
+        left: -20px;
+        background: white;
+        border-radius: 16px;
+        padding: 14px 18px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: slideInBadge 0.8s ease 1s both;
+        z-index: 10;
+    }
+    .hero-badge .badge-icon {
+        width: 44px; height: 44px;
+        background: linear-gradient(135deg, #28a745, #20c997);
+        border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        color: white; font-size: 1.2rem;
+    }
+    .hero-badge .badge-text { font-size: 0.8rem; color: #888; }
+    .hero-badge .badge-num  { font-size: 1.1rem; font-weight: 800; color: #1a2e1a; }
+
+    .hero-badge-2 {
+        position: absolute;
+        top: 30px;
+        right: -15px;
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        border-radius: 16px;
+        padding: 12px 16px;
+        box-shadow: 0 6px 20px rgba(40,167,69,0.4);
+        animation: slideInBadge 0.8s ease 1.2s both;
+        z-index: 10;
+        text-align: center;
+    }
+    .hero-badge-2 .b2-num  { font-size: 1.5rem; font-weight: 800; display: block; }
+    .hero-badge-2 .b2-text { font-size: 0.75rem; opacity: 0.9; }
+
+    /* ===== STATS SECTION ===== */
+    .stats-section {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        border-radius: 24px;
+        padding: 3rem 2rem;
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .stats-section::before {
+        content: '🌿';
+        position: absolute;
+        font-size: 12rem;
+        opacity: 0.06;
+        top: -40px; right: -30px;
+        pointer-events: none;
+    }
+    .stat-item { text-align: center; color: white; }
+    .stat-num {
+        font-size: 2.8rem;
+        font-weight: 800;
+        line-height: 1;
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+    .stat-label { font-size: 0.95rem; opacity: 0.88; font-weight: 500; }
+    .stat-divider {
+        width: 1px;
+        background: rgba(255,255,255,0.25);
+        margin: auto;
+    }
+
+    /* ===== SECTION HEADING ===== */
+    .section-heading { text-align: center; margin-bottom: 3rem; }
+    .section-heading h2 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #1a2e1a;
+        margin-bottom: 0.5rem;
+    }
+    .section-heading .underline {
+        width: 60px; height: 4px;
+        background: linear-gradient(135deg, #28a745, #20c997);
+        border-radius: 4px;
+        margin: 0.6rem auto 1rem;
+    }
+    .section-heading p { color: #777; font-size: 1rem; }
+
+    /* ===== PRODUCT CARDS ===== */
+    .product-card-wrap { animation: fadeInUp 0.6s ease both; }
+    .product-card-wrap:nth-child(1) { animation-delay: 0.05s; }
+    .product-card-wrap:nth-child(2) { animation-delay: 0.15s; }
+    .product-card-wrap:nth-child(3) { animation-delay: 0.25s; }
+    .product-card-wrap:nth-child(4) { animation-delay: 0.35s; }
+
+    .product-card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        background: white;
+        position: relative;
+    }
+    .product-card:hover {
+        transform: translateY(-12px) scale(1.01);
+        box-shadow: 0 20px 50px rgba(40,167,69,0.2);
+    }
+    .product-card .card-img-top {
+        height: 210px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+    .product-card:hover .card-img-top { transform: scale(1.07); }
+
+    .product-card .discount-badge {
+        position: absolute;
+        top: 12px; right: 12px;
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        color: white;
+        border-radius: 20px;
+        padding: 3px 10px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        box-shadow: 0 3px 10px rgba(255,65,108,0.4);
+    }
+    .product-card .card-body { padding: 1.2rem; }
+    .product-card .card-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #1a2e1a;
+        margin-bottom: 0.3rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .product-card .category-tag {
+        display: inline-block;
+        background: #e8f5e9;
+        color: #28a745;
+        border-radius: 20px;
+        font-size: 0.72rem;
+        padding: 2px 10px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .product-card .price-current {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #28a745;
+    }
+    .product-card .price-original {
+        font-size: 0.82rem;
+        color: #aaa;
+        text-decoration: line-through;
+        margin-right: 6px;
+    }
+    .product-card .btn-view {
+        background: transparent;
+        border: 1.5px solid #28a745;
+        color: #28a745;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: all 0.25s;
+    }
+    .product-card .btn-view:hover {
+        background: #28a745;
+        color: white;
+    }
+    .product-card .btn-add {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        border: none;
+        color: white;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 0.8rem;
+        transition: all 0.25s;
+        box-shadow: 0 3px 10px rgba(40,167,69,0.3);
+    }
+    .product-card .btn-add:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(40,167,69,0.45);
+    }
+
+    /* ===== FEATURES SECTION ===== */
+    .features-section {
+        background: linear-gradient(135deg, #f8fff9, #f0fdf4);
+        border-radius: 28px;
+        padding: 4rem 2rem;
+        margin-bottom: 4rem;
+    }
+    .feature-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        transition: all 0.35s ease;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #28a745, #20c997);
+        transform: scaleX(0);
+        transition: transform 0.35s ease;
+        transform-origin: left;
+    }
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 16px 40px rgba(40,167,69,0.15);
+    }
+    .feature-card:hover::before { transform: scaleX(1); }
+
+    .feature-icon-wrap {
+        width: 80px; height: 80px;
+        background: linear-gradient(135deg, #e8f5e9, #f0fdf4);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 1.5rem;
+        transition: all 0.35s ease;
+    }
+    .feature-card:hover .feature-icon-wrap {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        transform: rotate(10deg) scale(1.1);
+    }
+    .feature-card:hover .feature-icon-wrap i { color: white !important; }
+    .feature-icon-wrap i {
+        font-size: 2rem;
+        color: #28a745;
+        transition: color 0.35s;
+    }
+    .feature-card h5 { font-weight: 700; color: #1a2e1a; margin-bottom: 0.5rem; }
+    .feature-card p  { color: #777; font-size: 0.9rem; line-height: 1.6; margin: 0; }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+        background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 100%);
+        border-radius: 28px;
+        padding: 4rem 3rem;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    .cta-banner::before {
+        content: '🌱';
+        position: absolute;
+        font-size: 14rem;
+        opacity: 0.05;
+        top: -40px; left: -40px;
+        pointer-events: none;
+        animation: floatSlow 10s ease-in-out infinite;
+    }
+    .cta-banner::after {
+        content: '🍃';
+        position: absolute;
+        font-size: 10rem;
+        opacity: 0.06;
+        bottom: -20px; right: -20px;
+        pointer-events: none;
+        animation: floatSlow 12s ease-in-out infinite reverse;
+    }
+    .cta-banner h2 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    .cta-banner p {
+        font-size: 1.1rem;
+        opacity: 0.88;
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+    }
+    .btn-cta {
+        background: white;
+        color: #28a745;
+        border-radius: 50px;
+        padding: 0.9rem 2.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .btn-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        color: #1b5e20;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ===== STARS ===== */
+    .star-filled { color: #ffc107; }
+    .star-empty  { color: #e0e0e0; }
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="container">
-    <!-- Hero Section -->
+
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero-section mb-5">
-        <div class="row align-items-center py-5">
-            <div class="col-md-6">
-                <h1 class="display-4 fw-bold mb-3">
-                    Mang <span style="color: var(--primary-color);">Thiên Nhiên</span><br>
+        <!-- Leafy decoration -->
+        <span class="leaf-deco l1">🍃</span>
+        <span class="leaf-deco l2">🌿</span>
+        <span class="leaf-deco l3">🌱</span>
+        <span class="leaf-deco l4">🍀</span>
+
+        <div class="row align-items-center">
+            <!-- Left text -->
+            <div class="col-lg-6 hero-text mb-4 mb-lg-0">
+                <div class="mb-3">
+                    <span style="background:#e8f5e9;color:#28a745;border-radius:20px;padding:5px 16px;font-size:0.82rem;font-weight:700;letter-spacing:0.5px;">
+                        🌿 &nbsp;Cửa hàng cây cảnh số 1
+                    </span>
+                </div>
+                <h1 class="hero-title mb-3">
+                    Mang <span class="highlight">Thiên Nhiên</span><br>
                     Vào Ngôi Nhà Của Bạn
                 </h1>
-                <p class="lead mb-4">
-                    Khám phá bộ sưu tập cây cảnh mini đa dạng, dễ chăm sóc.
-                    Chat với AI để tìm cây phù hợp nhất!
+                <p class="hero-subtitle">
+                    Khám phá bộ sưu tập cây cảnh mini đa dạng, dễ chăm sóc.<br>
+                    💬 Chat với AI để tìm cây phù hợp nhất với bạn!
                 </p>
-
-                <div class="d-flex gap-3">
-                    <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">
+                <div class="hero-buttons d-flex flex-wrap gap-3">
+                    <a href="{% url 'product_list' %}" class="btn-hero-primary">
                         <i class="fas fa-shopping-bag"></i> Mua sắm ngay
                     </a>
-                    <a href="javascript:void(0)" onclick="toggleChat()" class="btn btn-outline-success btn-lg">
-
+                    <a href="javascript:void(0)" onclick="toggleChat()" class="btn-hero-secondary">
+                        <i class="fas fa-robot"></i> Tư vấn AI
                     </a>
                 </div>
+
+                <!-- Trust badges -->
+                <div class="d-flex flex-wrap gap-3 mt-4" style="animation: fadeInUp 0.8s ease 0.8s both; opacity:0; animation-fill-mode: both;">
+                    <div class="d-flex align-items-center gap-2" style="font-size:0.85rem;color:#555;">
+                        <i class="fas fa-check-circle text-success"></i> Cây cảnh chất lượng cao
+                    </div>
+                    <div class="d-flex align-items-center gap-2" style="font-size:0.85rem;color:#555;">
+                        <i class="fas fa-check-circle text-success"></i> Giao hàng toàn quốc
+                    </div>
+                    <div class="d-flex align-items-center gap-2" style="font-size:0.85rem;color:#555;">
+                        <i class="fas fa-check-circle text-success"></i> Tư vấn miễn phí
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?w=600&h=400&fit=crop"
-                    alt="Plants" class="img-fluid rounded-4 shadow-lg" style="max-height: 400px; object-fit: cover;">
+
+            <!-- Right image -->
+            <div class="col-lg-6 hero-image-wrap text-center position-relative px-4">
+                <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?w=700&h=480&fit=crop"
+                     alt="Beautiful Plants" class="hero-img">
+
+                <!-- Floating badge 1 -->
+                <div class="hero-badge">
+                    <div class="badge-icon"><i class="fas fa-leaf"></i></div>
+                    <div>
+                        <div class="badge-num">200+</div>
+                        <div class="badge-text">Loại cây cảnh</div>
+                    </div>
+                </div>
+
+                <!-- Floating badge 2 -->
+                <div class="hero-badge-2">
+                    <span class="b2-num">⭐ 4.9</span>
+                    <span class="b2-text">Đánh giá</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Đã xóa trắng phần danh mục/sản phẩm nổi bật ở đầu trang chủ -->
-
-    <!-- Featured Products -->
-    <section class="featured-products mb-5">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold">Sản Phẩm Nổi Bật</h2>
-            <p class="text-muted">Những cây cảnh được yêu thích nhất</p>
+    <!-- ===== STATS SECTION ===== -->
+    <section class="stats-section reveal mb-5">
+        <div class="row g-4 align-items-center text-center">
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="200">0+</span>
+                    <span class="stat-label">🌱 Loại cây</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="1500">0+</span>
+                    <span class="stat-label">😊 Khách hàng</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="98">0%</span>
+                    <span class="stat-label">⭐ Hài lòng</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="5">0+</span>
+                    <span class="stat-label">🏆 Năm kinh nghiệm</span>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section class="featured-products mb-5 reveal">
+        <div class="section-heading">
+            <h2>🌟 Sản Phẩm Nổi Bật</h2>
+            <div class="underline"></div>
+            <p>Những cây cảnh được yêu thích nhất tại Plant Shop</p>
+        </div>
+
         <div class="row g-4">
             {% for product in featured_products %}
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 product-card-wrap">
                 <div class="card product-card h-100">
                     {% if product.discount_percent > 0 %}
-                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">
-                        -{{ product.discount_percent }}%
-                    </span>
+                    <span class="discount-badge">-{{ product.discount_percent }}%</span>
                     {% endif %}
-                    {% if product.image %}
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"
-                        style="height: 200px; object-fit: cover;"
-                        onerror="this.src='https://placehold.co/300x200?text={{ product.name|urlencode }}'">
-                    {% else %}
-                    <img src="https://placehold.co/300x200?text={{ product.name|urlencode }}" class="card-img-top" alt="{{ product.name }}"
-                        style="height: 200px; object-fit: cover;">
-                    {% endif %}
-                    <div class="card-body">
-                        <h6 class="card-title fw-bold">{{ product.name }}</h6>
-                        <p class="text-muted small mb-2">{{ product.category.name }}</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <div class="text-warning me-2">
-                                {% for i in "12345" %}
-                                {% if forloop.counter <= product.rating_avg %} <i class="fas fa-star"></i>
-                                    {% else %}
-                                    <i class="far fa-star"></i>
-                                    {% endif %}
-                                    {% endfor %}
-                            </div>
-                            <small class="text-muted">({{ product.rating_count }})</small>
+
+                    <!-- Product image -->
+                    <div style="overflow:hidden;">
+                        {% if product.image %}
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"
+                             onerror="this.src='https://placehold.co/300x210/e8f5e9/28a745?text={{ product.name|urlencode }}'">
+                        {% else %}
+                        <img src="https://placehold.co/300x210/e8f5e9/28a745?text={{ product.name|urlencode }}"
+                             class="card-img-top" alt="{{ product.name }}">
+                        {% endif %}
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+                        <span class="category-tag">{{ product.category.name }}</span>
+                        <h6 class="card-title" title="{{ product.name }}">{{ product.name }}</h6>
+
+                        <!-- Stars -->
+                        <div class="d-flex align-items-center gap-1 mb-2">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= product.rating_avg %}
+                                <i class="fas fa-star star-filled" style="font-size:0.75rem;"></i>
+                                {% else %}
+                                <i class="far fa-star star-empty" style="font-size:0.75rem;"></i>
+                                {% endif %}
+                            {% endfor %}
+                            <small class="text-muted ms-1">({{ product.rating_count }})</small>
                         </div>
-                        <div class="mb-2">
+
+                        <!-- Price -->
+                        <div class="mb-3 mt-auto">
                             {% if product.original_price %}
-                            <span class="text-decoration-line-through text-muted me-2">
-                                {{ product.original_price|intcomma }}đ
-                            </span>
+                            <span class="price-original">{{ product.original_price|intcomma }}đ</span>
                             {% endif %}
-                            <span class="fw-bold text-success fs-5">
-                                {{ product.price|intcomma }}đ
-                            </span>
+                            <span class="price-current">{{ product.price|intcomma }}đ</span>
                         </div>
+
+                        <!-- Buttons -->
                         <div class="d-flex gap-2">
-                            <a href="{% url 'product_detail' product.slug %}"
-                                class="btn btn-sm btn-outline-success flex-fill">
-                                <i class="fas fa-eye"></i> Chi tiết
+                            <a href="{% url 'product_detail' product.slug %}" class="btn btn-view flex-fill">
+                                <i class="fas fa-eye"></i> Xem
                             </a>
                             {% if user.is_authenticated %}
-                            <form method="post" action="{% url 'add_to_cart' product.id %}" class="flex-fill">
+                            <form method="post" action="{% url 'add_to_cart' product.id %}">
                                 {% csrf_token %}
-                                <button type="submit" class="btn btn-sm btn-success w-100">
+                                <button type="submit" class="btn btn-add">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </form>
@@ -101,76 +670,128 @@
                 </div>
             </div>
             {% empty %}
-            <div class="col-12 text-center">
+            <div class="col-12 text-center py-5">
+                <i class="fas fa-seedling fa-3x text-muted mb-3 d-block"></i>
                 <p class="text-muted">Chưa có sản phẩm nổi bật</p>
             </div>
             {% endfor %}
         </div>
-        <div class="text-center mt-4">
-            <a href="{% url 'product_list' %}" class="btn btn-primary">
-                Xem tất cả sản phẩm <i class="fas fa-arrow-right"></i>
+
+        <div class="text-center mt-5">
+            <a href="{% url 'product_list' %}" class="btn-hero-primary" style="font-size:0.95rem;">
+                Xem tất cả sản phẩm <i class="fas fa-arrow-right ms-1"></i>
             </a>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features-section py-5 bg-light rounded-4">
-        <div class="row text-center g-4">
-            <div class="col-md-3">
-                <div class="feature-item">
-                    <i class="fas fa-shipping-fast fa-3x text-success mb-3"></i>
-                    <h5 class="fw-bold">Giao hàng nhanh</h5>
-                    <p class="text-muted">Miễn phí ship nội thành</p>
+    <!-- ===== FEATURES SECTION ===== -->
+    <section class="features-section reveal">
+        <div class="section-heading">
+            <h2>✨ Tại Sao Chọn Chúng Tôi?</h2>
+            <div class="underline"></div>
+            <p>Những lý do khiến hàng nghìn khách hàng tin tưởng Plant Shop</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h5>Giao hàng nhanh</h5>
+                    <p>Miễn phí ship nội thành, giao hàng trong ngày cho đơn từ 300k</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="feature-item">
-                    <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
-                    <h5 class="fw-bold">Đảm bảo chất lượng</h5>
-                    <p class="text-muted">Cây khỏe, đúng mô tả</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5>Đảm bảo chất lượng</h5>
+                    <p>Cây được chăm sóc kỹ càng, cam kết đúng mô tả và hoàn tiền nếu lỗi</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="feature-item">
-                    <i class="fas fa-robot fa-3x text-success mb-3"></i>
-                    <h5 class="fw-bold">Tư vấn AI</h5>
-                    <p class="text-muted">Gợi ý cây phù hợp</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h5>Tư vấn AI thông minh</h5>
+                    <p>Chatbot AI gợi ý cây phù hợp với không gian, phong thủy và sở thích</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="feature-item">
-                    <i class="fas fa-headset fa-3x text-success mb-3"></i>
-                    <h5 class="fw-bold">Hỗ trợ 24/7</h5>
-                    <p class="text-muted">Tư vấn chăm sóc cây</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h5>Hỗ trợ 24/7</h5>
+                    <p>Đội ngũ tư vấn luôn sẵn sàng hỗ trợ cách chăm sóc cây hiệu quả nhất</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner reveal">
+        <h2>🌿 Bắt Đầu Hành Trình Xanh Của Bạn</h2>
+        <p>Hãy để AI Plant Shop tư vấn loại cây phù hợp nhất với không gian sống của bạn — hoàn toàn miễn phí!</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="javascript:void(0)" onclick="toggleChat()" class="btn-cta">
+                <i class="fas fa-robot"></i> Chat với AI ngay
+            </a>
+            <a href="{% url 'product_list' %}" class="btn-cta" style="background:transparent;border:2px solid rgba(255,255,255,0.6);color:white;">
+                <i class="fas fa-leaf"></i> Xem sản phẩm
+            </a>
+        </div>
+    </section>
+
 </div>
 
-<style>
-    .hero-section {
-        background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.05));
-        border-radius: 20px;
-        padding: 2rem;
+{% block extra_js %}
+<script>
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Trigger count animation if it's the stats section
+                if (entry.target.classList.contains('stats-section')) {
+                    animateCounters();
+                }
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ===== COUNTER ANIMATION =====
+    function animateCounters() {
+        document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const suffix = el.textContent.replace(/[0-9]/g, '').replace('+','').replace('%','');
+            const isPercent = el.textContent.includes('%');
+            const isPlus   = true;
+            let current = 0;
+            const step = Math.max(1, Math.ceil(target / 60));
+            const interval = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = current + (isPercent ? '%' : '+');
+                if (current >= target) clearInterval(interval);
+            }, 25);
+        });
     }
 
-    .category-card {
-        transition: all 0.3s;
-        cursor: pointer;
-    }
-
-    .category-card:hover {
-        background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.05));
-    }
-
-    .product-card {
-        transition: all 0.3s;
-    }
-
-    .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-</style>
+    // ===== PRODUCT CARD STAGGER (already loaded) =====
+    const productCards = document.querySelectorAll('.product-card-wrap');
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.1 });
+    productCards.forEach(c => cardObserver.observe(c));
+</script>
+{% endblock %}
 {% endblock %}

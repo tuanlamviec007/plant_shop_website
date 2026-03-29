@@ -2,8 +2,13 @@
 Script để import dữ liệu cây cảnh từ CSV vào database
 """
 import os
+import sys
 import django
 import csv
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_dir = os.path.dirname(script_dir)
+sys.path.append(project_dir)
 
 # Setup Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'plant_shop.settings')
@@ -15,7 +20,7 @@ from django.utils.text import slugify
 
 def import_plants():
     """Import plants from CSV file"""
-    csv_file = 'plant_dataset.csv'
+    csv_file = os.path.join(project_dir, 'data', 'plant_dataset.csv')
     
     if not os.path.exists(csv_file):
         print(f"❌ File {csv_file} không tồn tại!")

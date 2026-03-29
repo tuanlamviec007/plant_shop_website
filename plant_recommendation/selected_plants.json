@@ -1,52 +1,104 @@
 [
     {
-        "id": 54,
+        "id": 6,
         "name": "cây kim tiền",
-        "slug": "cay-kim-tin"
+        "slug": "cay-kim-tien",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Lá dày, xanh bóng, mọc đối xứng trên thân. Cây khỏe, chịu hạn tốt, dễ chăm sóc. Phát triển tốt trong môi trường trong nhà.",
+        "meaning": "Tượng trưng cho tài lộc và thịnh vượng. Mang lại may mắn trong kinh doanh và công việc. Thường đặt ở phòng khách hoặc công ty.",
+        "care": "Ánh sáng: ánh sáng nhẹ, tránh nắng gắt. Tưới nước: 1–2 lần/tuần, không tưới quá nhiều. Đất trồng: đất tơi xốp, thoát nước tốt. Phân bón: bón phân mỗi 1–2 tháng. Lưu ý: cây chịu hạn tốt nhưng dễ bị úng nước."
     },
     {
-        "id": 19,
+        "id": 7,
         "name": "cây lưỡi hổ",
-        "slug": "cay-luoi-ho"
+        "slug": "cay-luoi-ho",
+        "category": "cây để trong phòng",
+        "desk_suitable": false,
+        "location_type": "indoor",
+        "characteristics": "Lá dài, cứng, mọc thẳng đứng. Lá có viền vàng hoặc xanh đậm. Có khả năng lọc không khí và hấp thụ độc tố.",
+        "meaning": "Biểu tượng của sức mạnh và bảo vệ gia đình. Theo phong thủy giúp xua đuổi năng lượng xấu. Mang lại may mắn và bình an.",
+        "care": "Ánh sáng: chịu được ánh sáng yếu hoặc ánh sáng trong nhà. Tưới nước: 1 lần/tuần, mùa lạnh có thể 2 tuần/lần. Đất trồng: đất khô ráo, thoát nước tốt. Phân bón: bón phân nhẹ mỗi 2–3 tháng. Lưu ý: không nên tưới quá nhiều nước."
     },
     {
-        "id": 28,
+        "id": 18,
         "name": "cây kim ngân",
-        "slug": "cay-kim-ngan"
+        "slug": "cay-kim-ngan",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Thân thường được tết bím lại. Lá xanh, mọc thành cụm 5 lá. Cây thích ánh sáng nhẹ và môi trường trong nhà.",
+        "meaning": "Đại diện cho tiền tài và sự giàu có. Theo phong thủy giúp thu hút tài lộc. Thường đặt ở bàn làm việc hoặc phòng khách.",
+        "care": "Ánh sáng: ánh sáng tự nhiên nhẹ, tránh nắng trực tiếp. Tưới nước: 2–3 lần/tuần. Đất trồng: đất giàu dinh dưỡng và thoát nước tốt. Phân bón: bón phân hữu cơ mỗi 1–2 tháng. Lưu ý: nên đặt nơi thoáng mát."
     },
     {
-        "id": 58,
+        "id": 13,
         "name": "cây thường xuân",
-        "slug": "cay-thng-xuan"
+        "slug": "cay-thuong-xuan",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Là cây dây leo, lá nhỏ xanh đậm. Có thể trồng treo hoặc leo tường. Sinh trưởng nhanh và dễ chăm sóc.",
+        "meaning": "Tượng trưng cho sự bền bỉ và trường tồn. Mang ý nghĩa gắn kết và phát triển lâu dài. Tạo không gian xanh mát.",
+        "care": "Ánh sáng: ánh sáng gián tiếp hoặc nơi có ánh sáng vừa phải. Tưới nước: 2–3 lần/tuần để giữ ẩm đất. Đất trồng: đất tơi xốp, giàu dinh dưỡng. Phân bón: bón phân mỗi tháng. Lưu ý: cắt tỉa thường xuyên để cây phát triển đẹp."
     },
     {
-        "id": 35,
+        "id": 25,
         "name": "cây thiết mộc lan",
-        "slug": "cay-thiet-moc-lan"
-    },
-    {
-        "id": 40,
-        "name": "cây vạn niên thanh",
-        "slug": "cay-van-nien-thanh"
+        "slug": "cay-thiet-moc-lan",
+        "category": "cây trồng tại sân vườn",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Thân gỗ, lá dài màu xanh có sọc vàng. Cây cao, thường trồng trong chậu lớn. Phát triển tốt trong môi trường văn phòng.",
+        "meaning": "Mang ý nghĩa may mắn và phát tài. Khi cây ra hoa được coi là dấu hiệu tài lộc. Tượng trưng cho sự thăng tiến trong sự nghiệp.",
+        "care": "Ánh sáng: ánh sáng tự nhiên, có thể chịu bóng nhẹ. Tưới nước: 1–2 lần/tuần. Đất trồng: đất thoát nước tốt. Phân bón: bón phân định kỳ mỗi 1–2 tháng. Lưu ý: tránh để cây ở nơi quá tối."
     },
     {
         "id": 30,
+        "name": "cây vạn niên thanh",
+        "slug": "cay-van-nien-thanh",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Lá to, xanh đậm có đốm trắng. Thích hợp trồng trong nhà hoặc nơi ít ánh sáng. Cây sống lâu và dễ chăm sóc.",
+        "meaning": "Tượng trưng cho sự trường thọ và bền vững. Mang lại sự hòa thuận và hạnh phúc. Thường dùng làm cây trang trí trong nhà.",
+        "care": "Ánh sáng: ánh sáng nhẹ hoặc trong nhà. Tưới nước: 2–3 lần/tuần. Đất trồng: đất ẩm và thoát nước tốt. Phân bón: bón phân 1–2 tháng/lần. Lưu ý: lau lá để cây quang hợp tốt."
+    },
+    {
+        "id": 20,
         "name": "cây trầu bà",
-        "slug": "cay-trau-ba"
+        "slug": "cay-trau-ba",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Là cây dây leo, lá hình tim. Có thể trồng trong đất hoặc trong nước. Phát triển nhanh và dễ chăm sóc.",
+        "meaning": "Tượng trưng cho tài lộc và may mắn. Giúp cân bằng năng lượng trong nhà. Mang lại cảm giác bình yên và thư giãn.",
+        "care": "Ánh sáng: ánh sáng gián tiếp. Tưới nước: 2–3 lần/tuần. Đất trồng: đất tơi xốp hoặc có thể trồng trong nước. Phân bón: bón phân nhẹ mỗi tháng. Lưu ý: cắt tỉa để cây phát triển gọn gàng."
     },
     {
-        "id": 50,
+        "id": 40,
         "name": "cây phú quý",
-        "slug": "cay-phu-quy"
+        "slug": "cay-phu-quy",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Lá xanh viền đỏ hoặc hồng. Kích thước nhỏ, thích hợp trồng chậu. Phù hợp đặt trên bàn làm việc hoặc kệ trang trí.",
+        "meaning": "Tượng trưng cho giàu sang và phú quý. Mang lại may mắn trong tài chính. Tăng năng lượng tích cực trong không gian.",
+        "care": "Ánh sáng: ánh sáng nhẹ, tránh nắng trực tiếp. Tưới nước: 2–3 lần/tuần. Đất trồng: đất giàu dinh dưỡng. Phân bón: bón phân mỗi 1–2 tháng. Lưu ý: giữ độ ẩm cho đất."
     },
     {
-        "id": 56,
+        "id": 21,
         "name": "cây lan ý",
-        "slug": "cay-lan-y-1"
+        "slug": "cay-lan-y",
+        "desk_suitable": true,
+        "location_type": "indoor",
+        "characteristics": "Lá xanh bóng, hoa trắng thanh nhã. Có khả năng lọc không khí rất tốt. Phát triển tốt trong môi trường trong nhà.",
+        "meaning": "Tượng trưng cho sự bình yên và hòa hợp. Mang lại may mắn và hạnh phúc cho gia đình. Giúp không gian sống thanh sạch.",
+        "care": "Ánh sáng: ánh sáng nhẹ hoặc bóng râm. Tưới nước: 2–3 lần/tuần. Đất trồng: đất ẩm, giàu dinh dưỡng. Phân bón: bón phân 1–2 tháng/lần. Lưu ý: nên phun sương để giữ độ ẩm."
     },
     {
-        "id": 57,
+        "id": 14,
         "name": "cây sung",
-        "slug": "cay-sung"
+        "slug": "cay-sung",
+        "desk_suitable": false,
+        "location_type": "both",
+        "characteristics": "Cây thân gỗ, thường trồng ngoài trời. Có quả mọc thành chùm trên thân. Cây phát triển tốt trong sân vườn.",
+        "meaning": "Tượng trưng cho sự sung túc và đủ đầy. Mang lại tài lộc và thịnh vượng cho gia đình. Thường trồng trước nhà để cầu may mắn.",
+        "care": "Ánh sáng: cần nhiều ánh sáng mặt trời. Tưới nước: 1 lần/ngày hoặc khi đất khô. Đất trồng: đất vườn giàu dinh dưỡng. Phân bón: bón phân hữu cơ định kỳ. Lưu ý: nên cắt tỉa để cây phát triển tốt."
     }
 ]

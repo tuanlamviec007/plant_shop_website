@@ -1,33 +1,146 @@
 {
+  "responses": {
+    "greeting": "Xin chào! Mình là trợ lý tư vấn cây cảnh. Bạn cần mình giúp gì hôm nay?",
+    "no_result": "Hiện tại mình chưa tìm thấy cây nào khớp hoàn toàn với yêu cầu của bạn. Bạn thử bớt tiêu chí xem sao nhé!"
+  },
   "intents": {
-    "greeting": ["hi", "hello", "chao", "xin chao", "lo", "halo"],
-    "recommendation": ["tim", "mua", "can", "tu van", "lua", "chon", "lay", "ban", "shop"]
+    "greeting": [
+      "hi",
+      "hello",
+      "chao",
+      "xin chao",
+      "lo",
+      "halo"
+    ],
+    "recommendation": [
+      "tim",
+      "mua",
+      "can",
+      "tu van",
+      "lua",
+      "chon",
+      "lay",
+      "ban",
+      "shop"
+    ]
   },
   "filters": {
     "location_type": {
-      "indoor": ["trong nha", "trong phong", "noi that", "ban lam viec", "van phong", "phong khach", "phong ngu", "ngu"],
-      "outdoor": ["ngoai troi", "san vuon", "ban cong", "hien", "cong", "vuon"],
-      "both": ["ca hai", "dau cung duoc"]
+      "indoor": [
+        "trong nhà",
+        "trong phòng",
+        "nội thất",
+        "bàn làm việc",
+        "văn phòng",
+        "phòng khách",
+        "phòng ngủ",
+        "để bàn",
+        "trong nha",
+        "trong phong",
+        "noi that",
+        "ban lam viec",
+        "van phong"
+      ],
+      "outdoor": [
+        "ngoài trời",
+        "sân vườn",
+        "ban công",
+        "hiên",
+        "cổng",
+        "vườn",
+        "ngoai troi",
+        "san vuon",
+        "ban cong",
+        "hien",
+        "vuon"
+      ],
+      "both": [
+        "cả hai",
+        "đâu cũng được",
+        "ca hai",
+        "dau cung duoc"
+      ]
     },
     "care_level": {
-      "easy": ["de cham", "it cham", "luoi", "de song", "khoe", "bat tu", "it chet"],
-      "medium": ["trung binh", "binh thuong"],
-      "hard": ["kho cham", "ti mi", "can than", "yeu", "chuyen nghiep"]
+      "easy": [
+        "dễ chăm",
+        "ít chăm",
+        "lười",
+        "dễ sống",
+        "khỏe",
+        "bất tử",
+        "ít chết",
+        "de cham",
+        "it cham",
+        "luoi",
+        "de song"
+      ],
+      "medium": [
+        "trung bình",
+        "bình thường",
+        "trung binh",
+        "binh thuong"
+      ],
+      "hard": [
+        "khó chăm",
+        "tỉ mỉ",
+        "cẩn thận",
+        "yếu",
+        "chuyên nghiệp",
+        "kho cham",
+        "ti mi",
+        "can than"
+      ]
     },
     "light_condition": {
-      "high": ["nhieu nang", "nang to", "nang gat", "sang"],
-      "medium": ["nang vua", "vua phai", "bong ram"],
-      "low": ["it nang", "trong nha", "toi", "thieu sang"],
-      "shade": ["bong ram", "ram mat", "khong co nang"]
+      "high": [
+        "nhiều nắng",
+        "nắng to",
+        "nắng gắt",
+        "sáng",
+        "nhieu nang",
+        "nang to"
+      ],
+      "medium": [
+        "nắng vừa",
+        "vừa phải",
+        "bóng râm",
+        "nang vua"
+      ],
+      "low": [
+        "ít nắng",
+        "thiếu sáng",
+        "it nang",
+        "thieu sang"
+      ],
+      "shade": [
+        "bóng râm",
+        "râm mát",
+        "không có nắng",
+        "bong ram",
+        "ram mat"
+      ]
     },
     "care_time": {
-        "low": ["ban", "ban ron", "it thoi gian"],
-        "high": ["ranh", "nhieu thoi gian", "yeu cay"]
+      "low": [
+        "bận",
+        "bận rộn",
+        "ít thời gian",
+        "ban ron",
+        "it thoi gian"
+      ],
+      "high": [
+        "rảnh",
+        "nhiều thời gian",
+        "yêu cây",
+        "ranh",
+        "nhieu thoi gian"
+      ]
     }
   },
   "responses": {
-      "greeting": "Chào bạn! Mình là trợ lý chọn cây. Bạn đang tìm cây như thế nào? (Ví dụ: 'Tìm cây để bàn dễ chăm sóc')",
-      "fallback": "Mình chưa hiểu ý bạn lắm. Bạn thử nói rõ hơn nhé, ví dụ: 'Cây trong nhà', 'Cây ngoài trời', 'Cây dễ chăm'...",
-      "no_result": "Hiện tại mình chưa tìm thấy cây nào khớp hoàn toàn với yêu cầu của bạn. Bạn thử bớt tiêu chí xem sao nhé!"
+    "greeting": "Chào bạn! Mình là trợ lý chọn cây. Bạn đang tìm cây như thế nào? (Ví dụ: 'Tìm cây để bàn dễ chăm sóc')",
+    "fallback": "Mình chưa hiểu ý bạn lắm. Bạn thử nói rõ hơn nhé, ví dụ: 'Cây trong nhà', 'Cây ngoài trời', 'Cây dễ chăm'...",
+    "no_result": "Hiện tại mình chưa tìm thấy cây nào khớp hoàn toàn với yêu cầu của bạn. Bạn thử bớt tiêu chí xem sao nhé!"
   }
 }

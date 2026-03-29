@@ -1,0 +1,243 @@
+/* ===================================================
+   Plant Shop - Custom Admin CSS (Jazzmin Enhancement)
+   =================================================== */
+
+/* ---- Navbar / Top Bar ---- */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ---- "Về Trang Web" button - nổi bật trong navbar ---- */
+.navbar .nav-item a[href="/"] {
+    background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+    color: #fff !important;
+    border-radius: 20px !important;
+    padding: 5px 16px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    margin: auto 4px !important;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.4) !important;
+    transition: all 0.25s ease !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+.navbar .nav-item a[href="/"]:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.55) !important;
+    background: linear-gradient(135deg, #e85d2c, #e07d12) !important;
+    color: #fff !important;
+}
+
+/* ---- Dashboard cards ---- */
+.card {
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.18) !important;
+    transform: translateY(-2px) !important;
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+}
+
+/* ---- Sidebar improvements ---- */
+.sidebar-dark-success .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-dark-success .nav-sidebar > .nav-item > .nav-link:hover {
+    background: linear-gradient(90deg, rgba(40, 167, 69, 0.85), rgba(32, 201, 151, 0.7)) !important;
+    border-radius: 8px !important;
+    margin: 0 6px !important;
+    padding-left: 10px !important;
+}
+
+.sidebar-dark-success .nav-sidebar .nav-item .nav-link {
+    border-radius: 8px !important;
+    margin: 2px 6px !important;
+    transition: all 0.2s !important;
+}
+
+/* ---- Table improvements ---- */
+#result_list {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+#result_list thead th {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border: none !important;
+    padding: 12px 16px !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.3px;
+}
+
+#result_list tbody tr {
+    transition: background-color 0.15s ease !important;
+}
+
+#result_list tbody tr:hover {
+    background-color: rgba(40, 167, 69, 0.06) !important;
+}
+
+#result_list tbody td {
+    padding: 10px 16px !important;
+    border-color: #f0f4f0 !important;
+    vertical-align: middle !important;
+    font-size: 0.88rem !important;
+}
+
+/* ---- Form improvements ---- */
+.form-control, .select2-container--default .select2-selection--single {
+    border-radius: 8px !important;
+    border-color: #d4edda !important;
+    font-size: 0.9rem !important;
+}
+
+.form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.2) !important;
+}
+
+/* ---- Buttons ---- */
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3) !important;
+    transition: all 0.2s !important;
+}
+
+.btn-success:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.45) !important;
+}
+
+.btn {
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+}
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+    background: transparent !important;
+    font-size: 0.85rem !important;
+}
+
+.breadcrumb-item a {
+    color: #28a745 !important;
+    transition: color 0.15s !important;
+}
+
+.breadcrumb-item a:hover {
+    color: #20c997 !important;
+}
+
+/* ---- Content area ---- */
+.content-wrapper {
+    background-color: #f8fdf9 !important;
+}
+
+/* ---- Action buttons in change list ---- */
+.object-tools .addlink,
+.object-tools a {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    border-radius: 20px !important;
+    padding: 6px 18px !important;
+    font-weight: 600 !important;
+    font-size: 0.82rem !important;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
+    transition: all 0.2s !important;
+}
+
+.object-tools .addlink:hover,
+.object-tools a:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.45) !important;
+}
+
+/* ---- Logo area (brand) ---- */
+.brand-link {
+    border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+    padding: 12px 16px !important;
+}
+
+.brand-text {
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ---- Small stat cards on dashboard ---- */
+.small-box {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+    transition: all 0.25s ease !important; 
+}
+
+.small-box:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+}
+
+.small-box .small-box-footer {
+    padding: 5px 10px !important;
+    font-weight: 500 !important;
+}
+
+/* ---- Login page improvements ---- */
+.login-page {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #a5d6a7) !important;
+}
+
+.login-box-body, .card-body .login-card-body {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+}
+
+/* ---- Search bar ---- */
+#toolbar form input[type=text],
+#searchbar {
+    border-radius: 20px !important;
+    border: 2px solid #d4edda !important;
+    padding: 6px 16px !important;
+}
+
+#toolbar form input[type=text]:focus,
+#searchbar:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.15rem rgba(40, 167, 69, 0.2) !important;
+}
+
+/* ---- Pagination ---- */
+.paginator .this-page,
+.paginator a {
+    border-radius: 6px !important;
+    padding: 4px 10px !important;
+    margin: 0 2px !important;
+}
+
+.paginator .this-page {
+    background: #28a745 !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* ---- Footer ---- */
+.main-footer {
+    font-size: 0.82rem !important;
+    color: #888 !important;
+    border-top: 1px solid #e9ecef !important;
+}

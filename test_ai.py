@@ -12,5 +12,5 @@ from plant_recommendation.ai_service import chatbot_response
 from django.core.serializers.json import DjangoJSONEncoder
 
 if __name__ == "__main__":
-    response = chatbot_response("tôi muốn tìm cây đào")
+    response = chatbot_response("tôi muốn tìm cây trong phòng")
     print(json.dumps(response, cls=DjangoJSONEncoder, ensure_ascii=False, indent=2))

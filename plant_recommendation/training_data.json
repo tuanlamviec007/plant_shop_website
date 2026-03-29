@@ -4479,6 +4479,76 @@
         }
     },
     {
+        "text": "tìm giúp mình cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây để trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
         "text": "cây trồng trong phòng",
         "intent": "find_by_location",
         "entities": {
@@ -4494,6 +4564,76 @@
     },
     {
         "text": "cho mình xem cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây trồng trong phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây trồng trong phòng",
         "intent": "find_by_location",
         "entities": {
             "location_type": "indoor"
@@ -4521,6 +4661,76 @@
         }
     },
     {
+        "text": "tìm giúp mình cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây nội thất",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
         "text": "cây để bàn làm việc",
         "intent": "find_by_location",
         "entities": {
@@ -4536,6 +4746,76 @@
     },
     {
         "text": "cho mình xem cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây để bàn làm việc",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây để bàn làm việc",
         "intent": "find_by_location",
         "entities": {
             "location_type": "indoor"
@@ -4563,6 +4843,622 @@
         }
     },
     {
+        "text": "tìm giúp mình cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây văn phòng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây để bàn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây phòng khách",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây phòng ngủ",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây trồng trong nhà",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tư vấn cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "cần mua cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình muốn cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "mình cần cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
+        "text": "tìm cây chịu bóng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "indoor"
+        }
+    },
+    {
         "text": "cây trồng ngoài trời",
         "intent": "find_by_location",
         "entities": {
@@ -4578,6 +5474,76 @@
     },
     {
         "text": "cho mình xem cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây trồng ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây trồng ngoài trời",
         "intent": "find_by_location",
         "entities": {
             "location_type": "outdoor"
@@ -4605,6 +5571,76 @@
         }
     },
     {
+        "text": "tìm giúp mình cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây sân vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
         "text": "cây ban công",
         "intent": "find_by_location",
         "entities": {
@@ -4620,6 +5656,76 @@
     },
     {
         "text": "cho mình xem cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây ban công",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây ban công",
         "intent": "find_by_location",
         "entities": {
             "location_type": "outdoor"
@@ -4647,6 +5753,440 @@
         }
     },
     {
+        "text": "tìm giúp mình cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây trồng trước hiên",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây ngoài trời",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây trước cổng",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây trồng ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tư vấn cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cho mình xem cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "cần mua cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình muốn cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "mình cần cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
+        "text": "tìm cây cho vườn",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "outdoor"
+        }
+    },
+    {
         "text": "cây nào cũng được",
         "intent": "find_by_location",
         "entities": {
@@ -4662,6 +6202,76 @@
     },
     {
         "text": "cho mình xem cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "gợi ý cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cần mua cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "mình muốn cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "mình cần cây nào cũng được",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cây nào cũng được",
         "intent": "find_by_location",
         "entities": {
             "location_type": "both"
@@ -4689,7 +6299,210 @@
         }
     },
     {
+        "text": "tìm giúp mình trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "gợi ý trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cần mua trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "mình muốn trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "mình cần trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm trồng đâu cũng sống",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tư vấn cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cho mình xem cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm giúp mình cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "gợi ý cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi 5 cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cho tôi 4 cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "gợi ý cho tôi cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "cần mua cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "mình muốn cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "mình cần cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
+        "text": "tìm cây trồng được trong và ngoài",
+        "intent": "find_by_location",
+        "entities": {
+            "location_type": "both"
+        }
+    },
+    {
         "text": "cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây dễ chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây dễ chăm",
         "intent": "find_by_care_level",
         "entities": {
             "care_level": "easy"
@@ -4703,7 +6516,91 @@
         }
     },
     {
+        "text": "tìm cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây ít chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
         "text": "cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây cho người lười",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây cho người lười",
         "intent": "find_by_care_level",
         "entities": {
             "care_level": "easy"
@@ -4717,7 +6614,91 @@
         }
     },
     {
+        "text": "tìm cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây sống dai",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
         "text": "cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây dễ sống",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây dễ sống",
         "intent": "find_by_care_level",
         "entities": {
             "care_level": "easy"
@@ -4731,7 +6712,336 @@
         }
     },
     {
+        "text": "tìm cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây không cần chăm nhiều",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây dễ nuôi",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây cho người bận rộn",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây ít tưới nước",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây dễ trồng",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "gợi ý cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "cho mình xem cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "tôi cần cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
+        "text": "mình muốn cây dễ chăm sóc nhất",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "easy"
+        }
+    },
+    {
         "text": "cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tìm cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "gợi ý cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "cho mình xem cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tôi cần cây chăm sóc trung bình",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "mình muốn cây chăm sóc trung bình",
         "intent": "find_by_care_level",
         "entities": {
             "care_level": "medium"
@@ -4745,7 +7055,140 @@
         }
     },
     {
+        "text": "tìm cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "gợi ý cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "cho mình xem cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tôi cần cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "mình muốn cây bình thường",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tìm cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "gợi ý cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "cho mình xem cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "tôi cần cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
+        "text": "mình muốn cây không quá khó không quá dễ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "medium"
+        }
+    },
+    {
         "text": "cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "gợi ý cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cho mình xem cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tôi cần cây khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "mình muốn cây khó chăm",
         "intent": "find_by_care_level",
         "entities": {
             "care_level": "hard"
@@ -4759,7 +7202,140 @@
         }
     },
     {
+        "text": "tìm cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "gợi ý cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cho mình xem cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tôi cần cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "mình muốn cây cần chăm sóc kỹ",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
         "text": "cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "gợi ý cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cho mình xem cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tôi cần cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "mình muốn cây đẹp mà khó chăm",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cây cần nhiều công chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cây cần nhiều công chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "gợi ý cây cần nhiều công chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tìm cho tôi cây cần nhiều công chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "cho mình xem cây cần nhiều công chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "tôi cần cây cần nhiều công chăm sóc",
+        "intent": "find_by_care_level",
+        "entities": {
+            "care_level": "hard"
+        }
+    },
+    {
+        "text": "mình muốn cây cần nhiều công chăm sóc",
         "intent": "find_by_care_level",
         "entities": {
             "care_level": "hard"
