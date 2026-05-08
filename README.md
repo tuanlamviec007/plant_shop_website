@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-5.0-green)](https://www.djangoproject.com/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple)](https://getbootstrap.com/)
-[![AI](https://img.shields.io/badge/AI-TF--IDF%20%2B%20LR-orange)](https://scikit-learn.org/)
+[![AI](https://img.shields.io/badge/AI-Gemini%20RAG-orange)](https://ai.google.dev/)
 
 Website thương mại điện tử chuyên cung cấp cây cảnh mini, tích hợp trợ lý ảo AI thông minh giúp tư vấn và chăm sóc cây trồng.
 
@@ -31,22 +31,19 @@ Website thương mại điện tử chuyên cung cấp cây cảnh mini, tích h
 
 ## 🤖 Hệ Thống AI Chatbot
 
-Chatbot sử dụng **pipeline NLP hybrid** (Machine Learning + Rule-based):
+Chatbot sử dụng **Google Gemini API** kết hợp **RAG (Retrieval-Augmented Generation)**:
 
-```
-Câu hỏi tiếng Việt → Normalize Text → underthesea Tokenizer
-→ TF-IDF Vectorizer (bigrams) → Logistic Regression (Intent Classification)
-→ Rule-based Entity Extraction → Django ORM Query → Response
+```text
+Câu hỏi người dùng → Nhận diện ý định (Gemini) 
+→ Truy xuất dữ liệu cây cảnh từ Database (RAG) 
+→ Tổng hợp thông tin & Trả lời tự nhiên (Gemini)
 ```
 
-**5 Intent hỗ trợ:**
-| Intent | Ví Dụ Câu Hỏi |
-|--------|--------------|
-| `greeting` | "Xin chào" |
-| `recommendation` | "Gợi ý cây dễ chăm giá dưới 150k" |
-| `ask_specific_plant` | "Cây kim tiền thích hợp chỗ nào?" |
-| `ask_plant_characteristics` | "Lan ý có độc không?" |
-| `compare_plants` | "So sánh kim tiền và thường xuân" |
+**Các tính năng thông minh:**
+- Gợi ý cây cảnh dựa trên điều kiện ánh sáng, giá cả, và kinh nghiệm chăm sóc.
+- Trả lời chi tiết về đặc tính và cách chăm sóc của từng loại cây.
+- So sánh sự khác nhau giữa các loại cây để giúp khách hàng dễ lựa chọn.
+- Duy trì ngữ cảnh hội thoại qua nhiều lượt chat bằng Django Sessions.
 
 ---
 
@@ -65,11 +62,11 @@ plant_shop_website/
 ├── orders/                     # App: Giỏ hàng & Đơn hàng
 ├── users/                      # App: Tài khoản & Hồ sơ
 ├── reviews/                    # App: Đánh giá & Bình luận
-├── plant_recommendation/       # App: AI Chatbot (TF-IDF + LR + underthesea)
-│   ├── ai_service.py           # Core NLP logic
-│   ├── train_model.py          # Training script
-│   ├── intent_model.pkl        # Pre-trained model
-│   └── training_data.json      # Training dataset
+├── plant_recommendation/       # App: AI Chatbot (Gemini API + RAG)
+│   ├── ai_service.py           # Logic tích hợp Gemini và RAG
+│   ├── generate_data.py        # Tạo dữ liệu vector
+│   ├── chatbot_config.json     # Prompt và config cho chatbot
+│   └── selected_plants.json    # Dữ liệu cache về cây cảnh
 │
 ├── templates/                  # HTML Templates (Bootstrap 5)
 ├── static/                     # CSS, JS, Images
@@ -146,7 +143,7 @@ Truy cập: **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 | **Backend** | Django 5.0, Python 3.13 |
 | **Database** | SQLite 3 + Django ORM |
 | **Frontend** | Bootstrap 5.3, HTML5, CSS3, JavaScript |
-| **AI/NLP** | scikit-learn (TF-IDF + Logistic Regression), underthesea |
+| **AI/NLP** | Google Gemini API (RAG Architecture) |
 | **Biểu Đồ** | Chart.js |
 | **Version Control** | Git / GitHub |
 
@@ -164,7 +161,7 @@ Truy cập: **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
 ## 📄 Tài Liệu Dự Án
 
-- 📋 **Phân công:** [work_assignment.md](work_assignment.md)
+- 📋 **Phân công:** (Đã hoàn thành)
 - 🔧 **SRS:** Xem trong tài liệu báo cáo đính kèm
 - 📊 **ERD & Use Case:** Xem trong tài liệu báo cáo đính kèm
 - 🤖 **Kiến trúc AI:** Xem trong tài liệu báo cáo đính kèm
